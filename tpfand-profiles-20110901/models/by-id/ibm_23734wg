@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2009-02-03 19:24:41
+# by  diffusae@yahoo.se 
+# approved on  2009-03-09 00:07:16
+# downloaded on  2009-03-09 00:11:52.545854
+#
+0. Sensor 0 = 0:0 49:3 59:5 65:7 75:255 
+1. Sensor 1 = 0:0 50:3 55:5 60:8 75:255 
+2. Sensor 2 = 0:0 40:255 
+3. Sensor 3 = 0:0 52:3 55:5 60:8 
+4. Sensor 4 = 0:0 40:255 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 40:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 5000.000000
+
+comment = The profile works good for a T42 (submitted by diffusae@yahoo.se)
+

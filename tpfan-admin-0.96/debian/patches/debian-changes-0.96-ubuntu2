@@ -1,0 +1,110 @@
+Description: Upstream changes introduced in version 0.96-ubuntu2
+ This patch has been created by dpkg-source during the package build.
+ Here's the last changelog entry, hopefully it gives details on why
+ those changes were made:
+ .
+ tpfan-admin (0.96-ubuntu2) natty; urgency=low
+ .
+   * Initial release of the Tpfanco fork
+   * Works with recent Ubuntu versions (Lucid, Maverick, Natty)
+ .
+ The person named in the Author field signed this changelog entry.
+Author: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- tpfan-admin-0.96.orig/src/tpfanadmin/build.py
++++ tpfan-admin-0.96/src/tpfanadmin/build.py
+@@ -17,6 +17,7 @@
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #
++import commands
+ 
+ # data directory
+ data_dir = "/usr/share/tpfan-admin/"
+@@ -25,8 +26,12 @@ data_dir = "/usr/share/tpfan-admin/"
+ install_path = "/usr/bin/tpfan-admin"
+ 
+ # command to restart tpfan-admin as root (used via os.execvp)
+-run_as_root_cmd = "gksu"
+-run_as_root_args = ["gksu", "--message", "Change settings of ThinkPad Fan Control", install_path]
++if commands.getoutput('pidof kdm') == "":
++  run_as_root_cmd = "gksu"
++  run_as_root_args = ["gksu", "--message", "Change settings of ThinkPad Fan Control", install_path]
++else:
++  run_as_root_cmd = "kdesudo"
++  run_as_root_args = ["kdesudo", "--comment", "Change settings of ThinkPad Fan Control", install_path]
+ 
+ # icon for window
+ icon_filename = "tpfan-admin-128x128.png"
+@@ -50,10 +55,12 @@ locale_dir = data_dir + "locales"
+ profile_submit_enabled = True
+ 
+ # profile submit url
+-profile_submit_url = "http://www.gambitchess.org/tp-fan/profile_submit.py"
++#profile_submit_url = "http://www.gambitchess.org/tp-fan/profile_submit.py"
++profile_submit_url = ""
+ 
+ # program to open url
+-profile_url_opener = data_dir + "/open-url.sh"
++#profile_url_opener = data_dir + "/open-url.sh"
++profile_url_opener = ""
+ 
+ # required tpfand version
+ # ONLY CHANGE IF YOU KNOW WHAT YOU ARE DOING
+--- tpfan-admin-0.96.orig/Makefile
++++ tpfan-admin-0.96/Makefile
+@@ -16,8 +16,8 @@ clean:
+ 	rm -rf mo
+ 
+ install: all
+-	install -d ${DESTDIR}/usr/lib/python2.5/site-packages/tpfanadmin
+-	install -m 644 src/tpfanadmin/* ${DESTDIR}/usr/lib/python2.5/site-packages/tpfanadmin
++	install -d ${DESTDIR}/usr/lib/python2.7/dist-packages/tpfanadmin
++	install -m 644 src/tpfanadmin/* ${DESTDIR}/usr/lib/python2.7/dist-packages/tpfanadmin
+ 	install -d ${DESTDIR}/usr/share/tpfan-admin/
+ 	install -m 644 share/* ${DESTDIR}/usr/share/tpfan-admin/
+ 	install -d ${DESTDIR}/usr/bin
+@@ -28,7 +28,7 @@ install: all
+ 	install -m 644 share/tpfan-admin.desktop ${DESTDIR}/usr/share/applications
+ 
+ uninstall:
+-	rm -rf ${DESTDIR}/usr/lib/python2.5/site-packages/tpfanadmin
++	rm -rf ${DESTDIR}/usr/lib/python2.7/dist-packages/tpfanadmin
+ 	rm -rf ${DESTDIR}/usr/share/tpfan-admin/
+ 	rm -f ${DESTDIR}/usr/bin/tpfan-admin
+ 	rm -f ${DESTDIR}/usr/share/applications/tpfan-admin.desktop
+--- tpfan-admin-0.96.orig/src/tpfanadmin/temperaturedialog.py
++++ tpfan-admin-0.96/src/tpfanadmin/temperaturedialog.py
+@@ -190,11 +190,14 @@ class TemperatureDialog:
+                                           buttons=gtk.BUTTONS_YES_NO,
+                                           message_format=submit_text)
+         if submit_dialog.run() == gtk.RESPONSE_YES:
+-            profile = globals.act_settings.get_profile_string()
+-            data = globals.act_settings.get_model_info()
+-            data['profile'] = profile
+-            url = build.profile_submit_url + "?" + urllib.urlencode(data)
+-            os.system(build.profile_url_opener + " \"" + url + "\"")
++            profile = globals.act_settings.get_profile_string()            
++            model_info = globals.act_settings.get_model_info()
++            path = '/tmp/tpfand-profile/' + model_info['vendor'].lower() + '_' + model_info['id'].lower()
++            if not os.path.exists('/tmp/tpfand-profile'):
++              os.makedirs('/tmp/tpfand-profile')            
++            f = open(path,'w')            
++            f.write(str(profile))
++            f.close()            
+         submit_dialog.destroy()
+         
+     def check_unlocked(self):

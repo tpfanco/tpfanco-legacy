@@ -1,0 +1,143 @@
+Description: Upstream changes introduced in version 0.95-ubuntu2
+ This patch has been created by dpkg-source during the package build.
+ Here's the last changelog entry, hopefully it gives details on why
+ those changes were made:
+ .
+ tpfand (0.95-ubuntu2) natty; urgency=low
+ .
+   * Initial release of the Tpfanco fork
+   * Works with recent Ubuntu versions (Lucid, Maverick, Natty)
+ .
+ The person named in the Author field signed this changelog entry.
+Author: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- tpfand-0.95.orig/etc/init.d/tpfand
++++ tpfand-0.95/etc/init.d/tpfand
+@@ -3,8 +3,8 @@
+ #
+ ### BEGIN INIT INFO
+ # Provides:          tpfand
+-# Required-Start:    $syslog $time
+-# Required-Stop:     $syslog $time
++# Required-Start:    $remote_fs $syslog $time
++# Required-Stop:     $remote_fs $syslog $time
+ # Default-Start:     2 3 4 5
+ # Default-Stop:      0 1 6
+ # Short-Description: ThinkPad Fan Control daemon
+@@ -32,6 +32,9 @@ restart) log_daemon_msg "Restarting Thin
+         start-stop-daemon --start --quiet --pidfile /var/run/tpfand.pid --name tpfand --startas /usr/sbin/tpfand -- $LSBNAMES
+         log_end_msg $?
+         ;;
++force-reload)
++        $0 restart
++        ;;
+ *)	log_action_msg "Usage: /etc/init.d/tpfand {start|stop|restart}"
+         exit 2
+         ;;
+--- tpfand-0.95.orig/etc/acpi/suspend.d/acpi-stop.sh
++++ tpfand-0.95/etc/acpi/suspend.d/acpi-stop.sh
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+ 
+ # stop tpfand during suspend
+-/etc/init.d/tpfand stop
++invoke-rc.d tpfand stop
+ 
+--- tpfand-0.95.orig/etc/acpi/resume.d/acpi-start.sh
++++ tpfand-0.95/etc/acpi/resume.d/acpi-start.sh
+@@ -1,5 +1,5 @@
+ #!/bin/sh
+ 
+ # start tpfand after resume
+-/etc/init.d/tpfand start
++invoke-rc.d tpfand start
+ 
+--- tpfand-0.95.orig/src/tpfand/settings.py
++++ tpfand-0.95/src/tpfand/settings.py
+@@ -21,6 +21,7 @@
+ import sys, os, os.path
+ import dbus, dbus.service, dbus.mainloop.glib, dbus.glib
+ import gobject
++import dmidecode
+ 
+ from tpfand import build
+ 
+@@ -151,27 +152,27 @@ class Settings(dbus.service.Object):
+         return files, profiles, id_match
+         
+     def read_model_info(self):
+-        """reads model info from HAL"""
++        """reads model info using dmidecode module"""
+         try:
+-            bus = dbus.SystemBus()            
+-            computer_obj = bus.get_object('org.freedesktop.Hal', '/org/freedesktop/Hal/devices/computer')
+-            computer = dbus.Interface(computer_obj, 'org.freedesktop.Hal.Device')
+-            
+-            product_id = computer.GetProperty('system.hardware.vendor') + "_" + computer.GetProperty('system.hardware.product')
++            current_system = dmidecode.system()                   
++            hw_product = current_system['0x0001']['data']['Product Name']
++            hw_vendor = current_system['0x0001']['data']['Manufacturer']
++            hw_version = current_system['0x0001']['data']['Version']
++            product_id = hw_vendor + "_" + hw_product
+             self.product_id = product_id.lower()
+-            product_name = computer.GetProperty('system.hardware.vendor') + "_" + computer.GetProperty('system.hardware.version')
++            product_name = hw_vendor.lower() + "_" + hw_version.lower()
+             self.product_name = product_name.lower().replace('/', '-').replace(' ', '_')
+             
+-            self.product_pretty_vendor = computer.GetProperty('system.hardware.vendor') 
+-            self.product_pretty_name = computer.GetProperty('system.hardware.version')
+-            self.product_pretty_id = computer.GetProperty('system.hardware.product')
++            self.product_pretty_vendor = hw_vendor
++            self.product_pretty_name = hw_version
++            self.product_pretty_id = hw_product
+         except:
+-            print "Warning: unable to get your system model from HAL."
+-            self.product_id = None
+-            self.product_name = None
+-            self.product_pretty_vendor = None
+-            self.product_pretty_name = None
+-            self.product_pretty_id = None   
++            print "Warning: unable to get your system model from dmidecode"
++            self.product_id = ''
++            self.product_name = ''
++            self.product_pretty_vendor = ''
++            self.product_pretty_name = ''
++            self.product_pretty_id = ''   
+                 
+     @dbus.service.method("org.thinkpad.fancontrol.Settings", in_signature='', out_signature='a{is}')
+     def get_sensor_names(self):
+--- tpfand-0.95.orig/Makefile
++++ tpfand-0.95/Makefile
+@@ -12,8 +12,8 @@ clean:
+ 	rm -f src/tpfand/*.pyc
+ 
+ install: all
+-	install -d $(DESTDIR)/usr/lib/python2.5/site-packages/tpfand
+-	install -m 644 src/tpfand/* $(DESTDIR)/usr/lib/python2.5/site-packages/tpfand
++	install -d $(DESTDIR)/usr/share/pyshared/tpfand
++	install -m 644 src/tpfand/* $(DESTDIR)/usr/share/pyshared/tpfand
+ 	install -d $(DESTDIR)/usr/share/tpfand/
+ 	install -d $(DESTDIR)/usr/share/tpfand/models
+ 	install -d $(DESTDIR)/usr/share/tpfand/models/by-id
+@@ -36,7 +36,7 @@ install: all
+ 	echo You still need to create links to the init script. 
+ 
+ uninstall:
+-	rm -rf $(DESTDIR)/usr/lib/python2.5/site-packages/tpfand
++	rm -rf $(DESTDIR)/usr/share/pyshared/tpfand
+ 	rm -rf $(DESTDIR)/usr/share/tpfand/
+ 	rm -f $(DESTDIR)/usr/sbin/tpfand
+ 	rm -f $(DESTDIR)/etc/init.d/tpfand

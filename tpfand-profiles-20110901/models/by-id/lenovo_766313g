@@ -1,0 +1,29 @@
+# Fan profile for tpfand
+# submitted on  2008-04-07 22:01:14
+# by an anonymous submitter
+# approved on  2008-04-19 14:49:07
+# downloaded on  2009-03-09 00:11:52.126505
+#
+0. CPU 1 = 0:0 65:6 70:255 50:1 55:2 60:4 
+1. CPU 2 = 0:0 65:6 70:255 50:1 55:2 60:4 
+2. HDD = 0:0 65:255 50:2 60:6 55:4 
+3. GPU = 0:0 66:6 60:4 70:255 55:2 
+4. Bat1 = 0:0 59:6 63:255 
+5. Sensor 5 = 0:255 
+6. Bat2 = 0:0 59:6 63:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:0 65:255 50:2 60:6 55:4 
+9. Sensor 9 = 0:0 65:6 70:255 50:1 55:2 60:4 
+10. Sensor 10 = 0:0 65:6 50:2 60:4 70:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 3030.000000
+
+

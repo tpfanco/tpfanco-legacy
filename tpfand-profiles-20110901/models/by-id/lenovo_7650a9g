@@ -1,0 +1,29 @@
+# Fan profile for tpfand
+# submitted on  2008-04-13 22:53:12
+# by an anonymous submitter
+# approved on  2008-04-19 14:45:01
+# downloaded on  2009-03-09 00:11:52.127837
+#
+0. Sensor 0 = 0:0 40:0 50:2 57:3 60:5 63:255 
+1. Sensor 1 = 0:0 54:255 
+2. Sensor 2 = 0:255 
+3. Sensor 3 = 0:255 
+4. Sensor 4 = 0:0 57:255 52:3 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 34:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:0 45:255 
+9. Sensor 9 = 0:0 45:255 
+10. Sensor 10 = 0:0 45:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 4
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 5000.000000
+
+

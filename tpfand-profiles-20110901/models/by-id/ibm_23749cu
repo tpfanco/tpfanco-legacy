@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2009-03-01 02:35:26
+# by  xiphosurus@gmail.com 
+# approved on  2009-03-09 00:03:31
+# downloaded on  2009-03-09 00:11:52.547915
+#
+0. Sensor 0 = 0:0 40:0 50:2 60:4 65:8 70:256 
+1. Sensor 1 = 0:0 42:0 70:256 
+2. Sensor 2 = 0:0 32:0 70:256 
+3. Sensor 3 = 0:0 50:0 60:2 70:4 75:8 80:256 
+4. Sensor 4 = 0:0 31:0 70:256 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 28:0 70:256 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 5000.000000
+
+comment = fan off when idle. fan ramps up only on CPU and GPU temps. (submitted by xiphosurus@gmail.com)
+

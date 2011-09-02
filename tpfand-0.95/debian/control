@@ -1,0 +1,26 @@
+Source: tpfand
+Section: admin
+Priority: optional
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Build-Depends: debhelper (>= 7.0.50~), python-support
+XS-Python-Version: >= 2.6
+Standards-Version: 3.9.1
+Homepage: http://code.google.com/p/tpfanco/
+
+Package: tpfand
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, acpi-support (>= 0.103), dbus (>= 1.1.20), python-dbus (>= 0.82), python-dmidecode (>= 3.10), python-libxml2 (>= 2.7.6)
+Section: admin
+Priority: optional
+Description: Controls fan speed of ThinkPad notebooks
+ The tpfand daemon controls the system fan of IBM/Lenovo
+ ThinkPad notebooks in software according to specified
+ temperature profile.
+ .
+ It can be used to make the notebook quieter.
+ However this also results in higher system temperatures that
+ may damage and/or shorten the lifespan of your computer.
+ .
+ tpfand-profiles contains contributed temperature profiles.
+ tpfan-admin provides a graphical configuration and monitoring interface.
+Homepage: http://code.google.com/p/tpfanco/

@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2008-04-17 13:59:23
+# by  kellygp@gmail.com 
+# approved on  2008-04-19 14:48:15
+# downloaded on  2009-03-09 00:11:52.209019
+#
+0. Core Duo = 0:0 65:4 70:5 75:6 14:0 80:7 50:2 85:8 58:3 
+1. Sensor 1 = 0:0 15:0 
+2. Sensor 2 = 0:0 15:0 
+3. FireGL5200 = 0:0 65:3 75:4 78:5 80:6 82:7 85:8 55:2 
+4. Sensor 4 = 0:0 15:0 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 15:0 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:0 15:0 
+9. Sensor 9 = 0:0 15:0 
+10. Sensor 10 = 0:0 15:0 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 4
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 1500.000000
+
+comment = This is my first revision for the T60p Core Duo 2.33 w FireGL V5200.\nQuiet Mode is only possible when the low power state is set on the GPU, to do this: \naticonfig --lsp to list powerstates\naticonfig --set-powerstate=1\n100% cooling kicks in for the GPU at 85 °C., I've never had a crash below this temperature and the FireGL V5200 runs hot typically. (submitted by kellygp@gmail.com)
+
