@@ -1,3 +1,9 @@
+tpfand (0.95-ubuntu3) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 23:08:07 +0200
+
 tpfand (0.95-ubuntu2) natty; urgency=low
 
   * first public release of the Tpfanco project
@@ -9,7 +15,7 @@ tpfand (0.95-ubuntu2) natty; urgency=low
   * fixed Launchpad Bug #450670. Set polling interval from 2 s to 4 s.
     This should save up to 10 wakeups. 
 
- -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 20:14:47 +0200
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 22:52:13 +0200
 
 tpfand (0.95-ubuntu1) jaunty; urgency=low
 
