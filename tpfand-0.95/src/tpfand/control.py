@@ -181,7 +181,7 @@ class Control(dbus.service.Object):
             for id in range(0, len(temps)):
                 temp = temps[id]
                 # value is +/-128, if sensor is disconnected
-                if abs(temp) != 128:
+                if abs(temp) != 128 and abs(temp) != 0:
                     points = act_settings.trigger_points[id]
                     speed = 0
                     
