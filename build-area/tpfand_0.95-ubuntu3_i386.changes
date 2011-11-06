@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 18 Sep 2011 00:15:42 +0200
+Source: tpfand
+Binary: tpfand
+Architecture: source all
+Version: 0.95-ubuntu3
+Distribution: natty
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand     - Controls fan speed of ThinkPad notebooks
+Changes: 
+ tpfand (0.95-ubuntu3) natty; urgency=low
+ .
+   * treat sensors with 0 value as disconnected and don't take them into account
+Checksums-Sha1: 
+ fc426a7174ea37ea5b7c5d7fc59ac42c72d2fe43 838 tpfand_0.95-ubuntu3.dsc
+ 57093f4008f150377ef0514968ac529ccf30ee42 9570 tpfand_0.95-ubuntu3.debian.tar.gz
+ b0f5428a41a117663bd5567054ac332083bb396f 16720 tpfand_0.95-ubuntu3_all.deb
+Checksums-Sha256: 
+ beca150644e3001e996c7d429560e1c06442e0ea070799d74e06da1947ce931f 838 tpfand_0.95-ubuntu3.dsc
+ 669348fd990643858909257a482e8c6c793414c7e927245e6d5456f212d6cf0c 9570 tpfand_0.95-ubuntu3.debian.tar.gz
+ bbdc0d522329fbebe783457699c2bbcbde2a8b7dc386c899183e7781d334112d 16720 tpfand_0.95-ubuntu3_all.deb
+Files: 
+ cb6884ef77c210f96612ddb3ba89a343 838 admin optional tpfand_0.95-ubuntu3.dsc
+ 732bffb534a063e50064503450340d00 9570 admin optional tpfand_0.95-ubuntu3.debian.tar.gz
+ c38596068d3d4280a98bedeb2c00019f 16720 admin optional tpfand_0.95-ubuntu3_all.deb

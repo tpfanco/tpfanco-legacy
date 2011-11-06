@@ -1,3 +1,9 @@
+tpfand (0.95-ubuntu4) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 18 Sep 2011 00:31:01 +0200
+
 tpfand (0.95-ubuntu3) natty; urgency=low
 
   * treat sensors with 0 value as disconnected and don't take them into account
