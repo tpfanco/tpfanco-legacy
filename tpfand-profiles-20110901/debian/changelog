@@ -1,8 +1,8 @@
-tpfand-profiles (20110901-ubuntu3) UNRELEASED; urgency=low
+tpfand-profiles (20110901-ubuntu3) natty; urgency=low
 
-  * NOT RELEASED YET
+  * add new profile for X201, thanks to gru3n3r from thinkpad-forum.de
 
- -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 23:10:55 +0200
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 06 Nov 2011 21:12:45 +0100
 
 tpfand-profiles (20110901-ubuntu2) natty; urgency=low
 
