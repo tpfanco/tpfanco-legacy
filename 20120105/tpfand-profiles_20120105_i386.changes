@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 05 Jan 2012 14:46:01 +0100
+Source: tpfand-profiles
+Binary: tpfand-profiles
+Architecture: source all
+Version: 20120105
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand-profiles - Fan temperature profiles for tpfand
+Changes: 
+ tpfand-profiles (20120105) oneiric; urgency=low
+ .
+   * add new profile for T410s (thanks to Gregor K.)
+Checksums-Sha1: 
+ 69ea4d9cbf163266e3926bae810ccb965b3bae85 579 tpfand-profiles_20120105.dsc
+ 435e656f462c199d74427c8b99930c41e2952d89 14885 tpfand-profiles_20120105.tar.gz
+ fecaea8e572d97f4368ddd316ead5afb8138e5e4 16318 tpfand-profiles_20120105_all.deb
+Checksums-Sha256: 
+ cfd8e19c9939da9a02c70edf0c71cfc22dd6baf5c520cb8a2c08eb6c530be921 579 tpfand-profiles_20120105.dsc
+ 8d6f148a96ff18d33f53f4a549522de27d3dc7171fdad0f2727a9cdfe2a2c2ec 14885 tpfand-profiles_20120105.tar.gz
+ 1b8679f5a9de6ac1552b44cfe88bea90ecd103126a421a9e240dbe127f7ea7f4 16318 tpfand-profiles_20120105_all.deb
+Files: 
+ 6645169a742fdf001fa14f24a1e9cc0c 579 admin optional tpfand-profiles_20120105.dsc
+ 49475c49eedae47dafdddfa2502216f6 14885 admin optional tpfand-profiles_20120105.tar.gz
+ 80137f52588bbf9be141ef37cf224138 16318 admin optional tpfand-profiles_20120105_all.deb
