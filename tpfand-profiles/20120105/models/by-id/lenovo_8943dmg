@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2008-04-27 10:55:43
+# by  ch.heimanns@gmx.de 
+# approved on  2008-04-28 20:39:58
+# downloaded on  2009-03-09 00:11:52.128165
+#
+0. CPU = 0:0 58:255 
+1. PCI/GPU = 0:0 48:255 
+2. Sensor 2 = 0:255 
+3. Sensor 3 = 0:255 
+4. BAT1 = 0:0 36:255 
+5. Sensor 5 = 0:255 
+6. BAT2/BAY = 0:0 34:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:0 44:255 
+9. Sensor 9 = 0:0 50:255 
+10. Sensor 10 = 0:0 50:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 3
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 10020.000000
+
+comment = Still not sure about the sensors. (submitted by ch.heimanns@gmx.de)
+

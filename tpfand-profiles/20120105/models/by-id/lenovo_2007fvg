@@ -1,0 +1,29 @@
+# Fan profile for tpfand
+# submitted on  2008-05-10 20:22:55
+# by an anonymous submitter
+# approved on  2008-05-13 19:16:14
+# downloaded on  2009-03-09 00:11:52.269111
+#
+0. CPU = 0:0 65:255 
+1. mini pci = 0:0 53:2 
+2. hdd = 0:0 52:2 
+3. ati v5250 = 0:0 74:0 80:2 86:8 
+4. bat0 = 0:0 47:255 
+5. Sensor 5 = 0:255 
+6. bat0 = 0:0 46:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:0 56:255 
+9. Sensor 9 = 0:0 62:255 
+10. Sensor 10 = 0:0 62:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 5
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 15070.000000
+
+

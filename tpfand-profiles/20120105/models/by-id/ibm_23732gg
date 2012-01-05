@@ -1,0 +1,29 @@
+# Fan profile for tpfand
+# submitted on  2008-05-17 05:15:13
+# by an anonymous submitter
+# approved on  2008-10-11 23:51:33
+# downloaded on  2009-03-09 00:11:52.269438
+#
+0. Prozessor = 0:0 35:2 48:3 53:4 59:5 62:6 65:7 68:255 
+1. System = 0:0 35:2 48:3 53:4 59:5 62:6 65:7 68:255 
+2. Festplatte = 0:0 36:4 44:255 
+3. VGA = 0:0 35:2 48:3 53:4 58:5 62:6 65:7 68:255 
+4. Sensor 4 = 0:0 40:0 50:0 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 35:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 1330.000000
+
+
