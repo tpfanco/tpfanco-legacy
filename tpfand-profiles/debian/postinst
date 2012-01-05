@@ -22,8 +22,7 @@ case "$1" in
     configure)
 		# restart tpfand to reload profiles
 		echo Restarting tpfand...
-		invoke-rc.d tpfand restart
-		true
+		invoke-rc.d tpfand restart || true
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
