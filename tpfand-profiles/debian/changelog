@@ -1,3 +1,9 @@
+tpfand-profiles (20120105) oneiric; urgency=low
+
+  * add new profile for T410s (thanks to Gregor K.)
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Thu, 05 Jan 2012 14:46:01 +0100
+
 tpfand-profiles (20110901-ubuntu3) natty; urgency=low
 
   * add new profile for X201, thanks to gru3n3r from thinkpad-forum.de
