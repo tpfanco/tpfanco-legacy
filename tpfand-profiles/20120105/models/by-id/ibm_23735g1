@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2008-12-20 14:03:22
+# by  tsa@gmx.li 
+# approved on  2009-03-09 00:05:36
+# downloaded on  2009-03-09 00:11:52.542608
+#
+0. CPU = 0:0 50:2 56:4 62:6 68:8 
+1. Sysboard = 0:0 50:2 53:3 56:4 59:5 62:6 65:7 68:255 
+2. Sensor 2 = 0:0 38:255 
+3. GPU = 0:0 50:2 55:4 60:6 65:255 
+4. Battery = 0:0 40:2 45:255 
+5. Sensor 5 = 0:0 35:5 40:255 
+6. Battery = 0:0 35:2 40:255 
+7. Sensor 7 = 0:0 35:5 40:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 1
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 5000.000000
+
+comment = based on ibm_23736go/matthias@reuter.ws (submitted by tsa@gmx.li)
+

@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2008-05-10 10:41:16
+# by  STFWIL001@uct.ac.za 
+# approved on  2008-05-13 19:14:54
+# downloaded on  2009-03-09 00:11:52.268638
+#
+0. Sensor 0 = 0:0 60:3 70:8 
+1. Sensor 1 = 0:0 55:8 
+2. Sensor 2 = 0:0 45:8 
+3. Sensor 3 = 0:0 55:8 
+4. Sensor 4 = 0:0 45:8 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 45:8 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 5
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 0.000000
+
+comment = The Pentium M cpu working range up to 100 degrees C according to manufacturer!\nSo started fan at 60 for 30% and then for 100% when reaches 70.\nUnder sustained load with good ventilation and room temp. 22 degrees C. the temp of cpu is often 80 with fan running at max.\n (submitted by STFWIL001@uct.ac.za)
+

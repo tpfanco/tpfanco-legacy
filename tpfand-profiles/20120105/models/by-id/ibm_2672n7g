@@ -1,0 +1,30 @@
+# Fan profile for tpfand
+# submitted on  2008-04-29 00:38:19
+# by  dan.walker.uce@gmail.com 
+# approved on  2008-05-03 17:34:49
+# downloaded on  2009-03-09 00:11:52.211424
+#
+0. Sensor 0 = 0:0 42:1 48:2 50:3 55:5 60:6 65:8 
+1. Sensor 1 = 0:255 
+2. Sensor 2 = 0:0 44:1 48:2 50:3 55:5 60:6 65:8 
+3. Sensor 3 = 0:0 70:255 
+4. Sensor 4 = 0:0 70:255 
+5. Sensor 5 = 0:255 
+6. Sensor 6 = 0:0 70:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 5000.000000
+
+comment = Hi. This profile isn't a "hotter and quieter" profile exactly, because the default hardware behaviour under Linux is too hot for comfort - hardware control doesn't normally kick in until about 55 degrees, though this is not always the case. This profile is really designed to keep the temperature around 42 - 48 degrees, which is similar to what it gets under Windows.\n\nOh, and thanks for a really great application - top stuff. (submitted by dan.walker.uce@gmail.com)
+

@@ -1,0 +1,29 @@
+# Fan profile for tpfand
+# submitted on  2008-05-03 12:59:55
+# by an anonymous submitter
+# approved on  2008-05-03 17:35:05
+# downloaded on  2009-03-09 00:11:52.264088
+#
+0. CPU = 0:0 53:2 60:8 
+1. APS = 0:0 42:2 50:8 
+2. CRD = 0:0 40:255 
+3. GPU = 0:0 53:2 60:8 
+4. Batterie = 0:0 34:255 
+5. Sensor 5 = 0:255 
+6. Batterie = 0:0 31:255 
+7. Sensor 7 = 0:255 
+8. BUS = 0:0 42:255 
+9. PCI = 0:0 51:2 57:255 
+10. Power = 0:0 44:8 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 5
+interval_speed = 2
+interval_duration = 500.000000
+interval_delay = 9000.000000
+
+
