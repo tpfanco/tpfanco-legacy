@@ -1,0 +1,18 @@
+Source: tpfan-admin
+Section: admin
+Priority: optional
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Build-Depends: debhelper (>= 7.0.50~), python-support
+XS-Python-Version: >= 2.6
+Standards-Version: 3.9.1
+Homepage: http://code.google.com/p/tpfanco/
+
+Package: tpfan-admin
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-central (>= 0.6.11), dbus (>= 1.1.20), python-gtk2 (>= 2.12), python-dbus (>= 0.82), gksu (>= 2.0), python-cairo (>= 1.4), python-glade2 (>= 2.12), python-rsvg (>=2.30.0), xdg-utils, tpfand (>= 0.94)
+Section: admin
+Priority: optional
+Description: Graphical configuration and monitoring interface for tpfand
+ tpfan-admin shows the current system temperatures and system fan speed.
+ It can be used to set the system fan trigger points.
+Homepage: http://code.google.com/p/tpfanco/

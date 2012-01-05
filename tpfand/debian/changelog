@@ -1,0 +1,101 @@
+tpfand (0.95-ubuntu4) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 18 Sep 2011 00:31:01 +0200
+
+tpfand (0.95-ubuntu3) natty; urgency=low
+
+  * treat sensors with 0 value as disconnected and don't take them into account
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 18 Sep 2011 00:15:42 +0200
+
+tpfand (0.95-ubuntu2) natty; urgency=low
+
+  * first public release of the Tpfanco project
+  * fixed Launchpad Bug #623718. Ubuntu Lucid, Ubuntu Maverick and
+    Ubuntu Natty are officially supported
+  * fixed Launchpad Bug #575199. Use dmidecode instead of hal
+  * fixed Launchpad Bug #480700. Install modules to /usr/pyshared/
+    instead of /usr/lib/python2.5/site-packages
+  * fixed Launchpad Bug #450670. Set polling interval from 2 s to 4 s.
+    This should save up to 10 wakeups. 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 22:52:13 +0200
+
+tpfand (0.95-ubuntu1) jaunty; urgency=low
+
+  * new upstream release
+  * fixes LP: 341944, LP: 374182
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 18 Apr 2009 22:58:20 +0200
+
+tpfand (0.94-ubuntu1) intrepid; urgency=low
+
+  * new upstream release
+  * full speed now available
+  * fixes #231309, #238373, #231312, #238372
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 11 Oct 2008 15:45:22 +0200
+
+tpfand (0.93-ubuntu1) hardy; urgency=low
+
+  * new upstream release
+  * only show comment from profile that best matches the notebook model
+    (fixes: "generic profile is used" is falsely displayed)
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 23 Aug 2008 23:39:52 +0200
+
+tpfand (0.92-ubuntu1) hardy; urgency=low
+
+  * new upstream release
+  * man page is now included
+  * fan profiles have been removed from this package and are
+    now available seperately in package tpfand-profiles
+
+ -- Sebastian Urban <surban84@googlemail.com>  Tue, 13 May 2008 17:32:01 +0200
+
+tpfand (0.91-ubuntu2) hardy; urgency=low
+
+  * changed Python policy to version 2
+  * changed Standards-Version to 3.7.3
+
+ -- Sebastian Urban <surban84@googlemail.com>  Tue, 13 May 2008 17:31:30 +0200
+
+tpfand (0.91-ubuntu1) hardy; urgency=low
+
+  * new upstream release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 19 Apr 2008 17:57:23 +0200
+
+tpfand (0.90rc2-4) hardy; urgency=low
+
+  * added dbus and hal dependencies to init script lp: #216956
+  * init script now runs later in the boot sequence
+  * remove /etc/tpfand.conf on purge
+
+ -- Sebastian Urban <surban84@googlemail.com>  Mon, 14 Apr 2008 17:19:59 +0200
+
+tpfand (0.90rc2-3) hardy; urgency=low
+
+  * always try to load thinkpad_acpi before starting tpfand
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 05 Apr 2008 19:01:41 +0200
+
+tpfand (0.90rc2-2) hardy; urgency=low
+
+  * minor package fixes
+
+ -- Sebastian Urban <surban84@googlemail.com>  Fri, 04 Apr 2008 22:35:36 +0200
+
+tpfand (0.90rc2-1) hardy; urgency=low
+
+  * new upstream release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Wed, 02 Apr 2008 16:57:08 +0200
+
+tpfand (0.90rc1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Wed, 02 Apr 2008 16:56:56 +0200

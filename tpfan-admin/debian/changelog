@@ -1,0 +1,88 @@
+tpfan-admin (0.96-ubuntu3) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 23:09:10 +0200
+
+tpfan-admin (0.96-ubuntu2) natty; urgency=low
+
+  * first public release of the Tpfanco project
+  * Ubuntu Lucid, Ubuntu Maverick and Ubuntu Natty are officially
+    supported
+  * fixed Launchpad Bug #480700. Install modules to /usr/pyshared/
+    instead of /usr/lib/python2.5/site-packages
+  * better KDE support. If KDM is detected, tpfan-admin uses kdesudo
+    instead of gksudo
+  * profiles for submitting now get saved in the /tmp/tpfand-profile
+    directory. You must manually email the profile to the Tpfanco
+    project 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 20:15:40 +0200
+
+tpfan-admin (0.96-ubuntu1) jaunty; urgency=low
+
+  * new upstream release
+  * fixes LP: 341944, LP: 321707, LP: 358071, LP: 346523
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 18 Apr 2009 23:00:19 +0200
+
+tpfan-admin (0.95-ubuntu1) intrepid; urgency=low
+
+  * new upstream release
+  * updated translations
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sun, 08 Mar 2009 23:27:47 +0100
+
+tpfan-admin (0.94-ubuntu1) intrepid; urgency=low
+
+  * new upstream release
+  * full speed now available
+  * fixes #231309, #238373, #231312, #238372
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 11 Oct 2008 18:27:35 +0200
+
+tpfan-admin (0.92-ubuntu1) hardy; urgency=low
+
+  * new upstream release
+  * added man page
+
+ -- Sebastian Urban <surban84@googlemail.com>  Tue, 13 May 2008 18:56:43 +0200
+
+tpfan-admin (0.91-ubuntu2) hardy; urgency=low
+
+  * updated to policy 3.7.3
+  * set python policy to version 2
+  * fixed missing dh_desktop in debian/rules
+
+ -- Sebastian Urban <surban84@googlemail.com>  Mon, 12 May 2008 13:21:05 +0200
+
+tpfan-admin (0.91-ubuntu1) hardy; urgency=low
+
+  * new upstream release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 19 Apr 2008 17:59:02 +0200
+
+tpfan-admin (0.90rc2-3) hardy; urgency=low
+
+  * added missing dependencies
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 05 Apr 2008 14:05:06 +0200
+
+tpfan-admin (0.90rc2-2) hardy; urgency=low
+
+  * fixed open-url.sh
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sat, 05 Apr 2008 03:55:37 +0200
+
+tpfan-admin (0.90rc2-1) hardy; urgency=low
+
+  * new upstream release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Wed, 02 Apr 2008 17:00:15 +0200
+
+tpfan-admin (0.90rc1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Sebastian Urban <surban84@googlemail.com>  Sun, 30 Mar 2008 16:20:59 +0200
+
