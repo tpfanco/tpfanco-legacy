@@ -436,7 +436,7 @@ class TemperatureDialog:
         temps = globals.controller.get_temperatures()
         hys_temps, hys_levels = globals.controller.get_trip_temperatures(), globals.controller.get_trip_fan_speeds()
         for n in range(0, len(temps)):
-            if abs(temps[n]) == 128:
+            if abs(temps[n]) in [-128, 128, 0]:
                 self.thermos[n].hide()
             else:
                 self.thermos[n].show()
