@@ -82,8 +82,7 @@ class Thermometer(gtk.DrawingArea):
         self.cross_cursor = gdk.Cursor(gdk.CROSS)
         self.hand_cursor = gdk.Cursor(gdk.HAND2)
 
-        self.trigger_names = { 0: _("off"), 
-                               1: _("interval"),
+        self.trigger_names = { 0: _("off"),
                                2: _("15%"),
                                3: _("30%"),
                                4: _("45%"),

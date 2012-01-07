@@ -97,11 +97,11 @@ class TemperatureDialog:
         self.cbOverride = globals.my_xml.get_widget('checkbuttonOverride')
         self.cbOverride.connect('toggled', self.override_changed, None)
         
-        self.hsIntervalDuration = globals.my_xml.get_widget('hscaleIntervalDuration')
-        self.hsIntervalDuration.connect('value-changed', self.options_changed, None)
+        #self.hsIntervalDuration = globals.my_xml.get_widget('hscaleIntervalDuration')
+        #self.hsIntervalDuration.connect('value-changed', self.options_changed, None)
         
-        self.hsIntervalDelay = globals.my_xml.get_widget('hscaleIntervalDelay')
-        self.hsIntervalDelay.connect('value-changed', self.options_changed, None)
+        #self.hsIntervalDelay = globals.my_xml.get_widget('hscaleIntervalDelay')
+        #self.hsIntervalDelay.connect('value-changed', self.options_changed, None)
         
         self.hsHysteresis = globals.my_xml.get_widget('hscaleHysteresis')
         self.hsHysteresis.connect('value-changed', self.options_changed, None)
@@ -262,8 +262,8 @@ class TemperatureDialog:
                 self.disclaimer_accepted = True
             self.cbEnable.set_active(bool(opts['enabled']))
             self.cbOverride.set_active(bool(opts['override_profile']))
-            self.hsIntervalDuration.set_value(opts['interval_duration'] / 1000.0)
-            self.hsIntervalDelay.set_value(opts['interval_delay'] / 1000.0)
+            #self.hsIntervalDuration.set_value(opts['interval_duration'] / 1000.0)
+            #self.hsIntervalDelay.set_value(opts['interval_delay'] / 1000.0)
             self.hsHysteresis.set_value(opts['hysteresis'])
             self.update_sensitivity()
             if self.cbOverride.get_active() == True:
@@ -280,8 +280,8 @@ class TemperatureDialog:
         if not self.updating:
             self.updating = True
             self.hsHysteresis.set_range(*globals.act_settings.get_setting_limits('hysteresis'))
-            self.hsIntervalDelay.set_range(*globals.multiply_list(globals.act_settings.get_setting_limits('interval_delay'), 1.0/1000.0))
-            self.hsIntervalDuration.set_range(*globals.multiply_list(globals.act_settings.get_setting_limits('interval_duration'), 1.0/1000.0))
+            #self.hsIntervalDelay.set_range(*globals.multiply_list(globals.act_settings.get_setting_limits('interval_delay'), 1.0/1000.0))
+            #self.hsIntervalDuration.set_range(*globals.multiply_list(globals.act_settings.get_setting_limits('interval_duration'), 1.0/1000.0))
             self.updating = False
         
     def update_model_info(self):
@@ -342,7 +342,8 @@ class TemperatureDialog:
                                                     
     def set_profile_override_controls_sensitivity(self, override):
         """sets if profile settings are configurable by user"""
-        for control in [self.hsIntervalDuration, self.hsIntervalDelay, self.hsHysteresis] + self.thermos:
+        #for control in [self.hsIntervalDuration, self.hsIntervalDelay, self.hsHysteresis] + self.thermos:
+        for control in [self.hsHysteresis] + self.thermos:
             control.set_sensitive(override)
           
     def set_temperature_unit(self, unit):
@@ -400,8 +401,8 @@ class TemperatureDialog:
             opts['enabled'] = int(self.cbEnable.get_active())
             opts['override_profile'] = int(self.cbOverride.get_active())
             if self.cbOverride.get_active():
-                opts['interval_duration'] = self.hsIntervalDuration.get_value() * 1000.0
-                opts['interval_delay'] = self.hsIntervalDelay.get_value() * 1000.0
+                #opts['interval_duration'] = self.hsIntervalDuration.get_value() * 1000.0
+                #opts['interval_delay'] = self.hsIntervalDelay.get_value() * 1000.0
                 opts['hysteresis'] = self.hsHysteresis.get_value()
             globals.act_settings.set_settings(opts)
             globals.controller.reset_trips()
