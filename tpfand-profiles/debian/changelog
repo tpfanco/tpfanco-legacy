@@ -1,3 +1,10 @@
+tpfand-profiles (20120111) oneiric; urgency=low
+
+  * remove some profiles that contained the from now on                                                                                     
+    unsuppored interval mode 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Wed, 11 Jan 2012 00:41:26 +0100
+
 tpfand-profiles (20120105) oneiric; urgency=low
 
   * add new profile for T410s (thanks to Gregor K.)
