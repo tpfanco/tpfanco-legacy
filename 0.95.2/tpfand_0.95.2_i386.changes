@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Wed, 11 Jan 2012 00:31:30 +0100
+Source: tpfand
+Binary: tpfand
+Architecture: source all
+Version: 0.95.2
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand     - Controls fan speed of ThinkPad notebooks
+Changes: 
+ tpfand (0.95.2) oneiric; urgency=low
+ .
+   * fix fan pulsing on T410s (thanks to Shad for testing!)
+   * remove interval mode
+   * add debug mode. To activate stop tpfand ('sudo /etc/init.d/tpfand stop') and run 'sudo /usr/sbin/tpfand --debug'
+Checksums-Sha1: 
+ a6c9169928b61db9b787d7364b6d7637ceff0e3d 565 tpfand_0.95.2.dsc
+ 9903650a77545a3f158dac5f608bc08a3c10368f 34008 tpfand_0.95.2.tar.gz
+ ed1d4dfce401fe71273aaa0384887ecc16a05904 17104 tpfand_0.95.2_all.deb
+Checksums-Sha256: 
+ 9d753a8898b857d4dcf87e44fa43800f0b39c07ae962c174bd7c2aeac505b24f 565 tpfand_0.95.2.dsc
+ f162569253d3f5a3a4c78ba18fc2da1b059973c4c689d92320338001b0874d64 34008 tpfand_0.95.2.tar.gz
+ 1c0abb2064ca6c7478d9eb0530b7420514d331d71d19c71a24d3e2040d45fbca 17104 tpfand_0.95.2_all.deb
+Files: 
+ be4df7d48c1d630de885ef203222d0c0 565 admin optional tpfand_0.95.2.dsc
+ b9be3c51f4562579f8244d92588a29be 34008 admin optional tpfand_0.95.2.tar.gz
+ 35ed54df8f70490d3e86d8a33c60f9bb 17104 admin optional tpfand_0.95.2_all.deb

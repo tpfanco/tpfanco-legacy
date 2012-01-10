@@ -1,0 +1,217 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -ai386
+dpkg-buildpackage: exportieren von CFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von CPPFLAGS aus dpkg-buildflags (Quelle: vendor): 
+dpkg-buildpackage: exportieren von CXXFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von FFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von LDFLAGS aus dpkg-buildflags (Quelle: vendor): -Wl,-Bsymbolic-functions
+dpkg-buildpackage: Quellpaket tpfand
+dpkg-buildpackage: Quellversion 0.95.2
+dpkg-buildpackage: Quellen geändert durch Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+ dpkg-source --before-build tpfand-0.95.2
+dpkg-buildpackage: Host-Architektur i386
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+	make -j1 clean
+make[1]: Betrete Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+rm -f tpfand.8
+rm -f src/tpfand/*.pyc
+make[1]: Verlasse Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+   dh_clean
+	rm -f debian/tpfand.substvars
+	rm -f debian/tpfand.*.debhelper
+	rm -rf debian/tpfand/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+	rm -f *-stamp
+ dpkg-source -b tpfand-0.95.2
+dpkg-source: Information: Quellformat »3.0 (native)« wird verwendet
+dpkg-source: Information: tpfand wird in tpfand_0.95.2.tar.gz gebaut
+dpkg-source: Information: tpfand wird in tpfand_0.95.2.dsc gebaut
+ debian/rules build
+dh build
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+	make -j1
+make[1]: Betrete Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+pod2man --section=8 --release=Version\ `cat src/tpfand/build.py | grep "version = " | sed  -e "s/version = \"\(.*\)\"/\1/"` --center "" man/tpfand.pod > tpfand.8
+make[1]: Verlasse Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+	rm -f debian/tpfand.substvars
+	rm -f debian/tpfand.*.debhelper
+	rm -rf debian/tpfand/
+   dh_installdirs
+	install -d debian/tpfand
+   dh_auto_install
+	make -j1 install DESTDIR=/home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand
+make[1]: Betrete Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/pyshared/tpfand
+install -m 644 src/tpfand/* /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/pyshared/tpfand
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/tpfand/
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/tpfand/models
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/tpfand/models/by-id
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/tpfand/models/by-name
+install -m 644 share/models/generic /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/share/tpfand/models
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/dbus-1/system.d/
+install -m 644 etc/dbus-1/system.d/tpfand.conf /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/dbus-1/system.d/tpfand.conf
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/sbin
+install -m 755 wrappers/tpfand /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/usr/sbin/
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/init.d
+install -m 755 etc/init.d/* /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/init.d/
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/acpi/suspend.d
+install -m 755 etc/acpi/suspend.d/acpi-stop.sh /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/acpi/suspend.d/09-tpfand-stop.sh
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/acpi/resume.d
+install -m 755 etc/acpi/resume.d/acpi-start.sh /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/acpi/resume.d/91-tpfand-start.sh
+install -d /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/modprobe.d
+install -m 644 etc/modprobe.d/tpfand.conf /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/modprobe.d/
+if [ ! -e /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/tpfand.conf ] ; then install -m 644 etc/tpfand.conf /home/vs/testsvn/buildarea/tpfand-0.95.2/debian/tpfand/etc/tpfand.conf ; fi
+echo Installation complete.
+Installation complete.
+echo You still need to create links to the init script. 
+You still need to create links to the init script.
+make[1]: Verlasse Verzeichnis '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+   dh_install
+   dh_installdocs
+	install -g 0 -o 0 -d debian/tpfand/usr/share/doc/tpfand
+	cp -a README debian/tpfand/usr/share/doc/tpfand
+	chown -R 0:0 debian/tpfand/usr/share/doc
+	chmod -R go=rX debian/tpfand/usr/share/doc
+	chmod -R u\+rw debian/tpfand/usr/share/doc
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/tpfand/usr/share/doc/tpfand/copyright
+   dh_installchangelogs
+	install -o 0 -g 0 -p -m644 debian/changelog debian/tpfand/usr/share/doc/tpfand/changelog
+   dh_installexamples
+   dh_installman
+	install -d debian/tpfand/usr/share/man/man8/
+	install -p -m644 tpfand.8 debian/tpfand/usr/share/man/man8/tpfand.8
+	man --recode UTF-8 ./tpfand\.8 > tpfand\.8\.new
+	chmod 644 tpfand.8.new
+	mv -f tpfand.8.new tpfand.8
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+	install -o 0 -g 0 -d debian/tpfand/DEBIAN
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+	/usr/share/python-support/private/movemodules --prefix /usr -V 2.6- debian/tpfand
+	(grep -s -v python:Versions debian/tpfand.substvars; echo python:Versions=2.6) > debian/tpfand.substvars.new
+	mv debian/tpfand.substvars.new debian/tpfand.substvars
+	(grep -s -v python:Versions debian/tpfand.substvars; echo "python:Versions=2.6, 2.7") > debian/tpfand.substvars.new
+	mv debian/tpfand.substvars.new debian/tpfand.substvars
+	(grep -s -v python:Depends debian/tpfand.substvars; echo "python:Depends=python (>= 2.6)") > debian/tpfand.substvars.new
+	mv debian/tpfand.substvars.new debian/tpfand.substvars
+	(grep -s -v python:Depends debian/tpfand.substvars; echo "python:Depends=python (>= 2.6), python-support (>= 0.90.0)") > debian/tpfand.substvars.new
+	mv debian/tpfand.substvars.new debian/tpfand.substvars
+	echo "# Automatically added by dh_pysupport">> debian/tpfand.prerm.debhelper
+	sed "s,#ARGS#, tpfand.public," /usr/share/debhelper/autoscripts/prerm-python-support >> debian/tpfand.prerm.debhelper
+	echo '# End automatically added section' >> debian/tpfand.prerm.debhelper
+	echo "# Automatically added by dh_pysupport">> debian/tpfand.postinst.debhelper
+	sed "s,#ARGS#, tpfand.public," /usr/share/debhelper/autoscripts/postinst-python-support >> debian/tpfand.postinst.debhelper
+	echo '# End automatically added section' >> debian/tpfand.postinst.debhelper
+   dh_installinit
+	install -p -m755 debian/tpfand.init debian/tpfand/etc/init.d/tpfand
+	echo "# Automatically added by dh_installinit">> debian/tpfand.postinst.debhelper
+	sed "s/#SCRIPT#/tpfand/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/postinst-init >> debian/tpfand.postinst.debhelper
+	echo '# End automatically added section' >> debian/tpfand.postinst.debhelper
+	echo "# Automatically added by dh_installinit"> debian/tpfand.prerm.debhelper.new
+	sed "s/#SCRIPT#/tpfand/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/prerm-init >> debian/tpfand.prerm.debhelper.new
+	echo '# End automatically added section' >> debian/tpfand.prerm.debhelper.new
+	cat debian/tpfand.prerm.debhelper >> debian/tpfand.prerm.debhelper.new
+	mv debian/tpfand.prerm.debhelper.new debian/tpfand.prerm.debhelper
+	echo "# Automatically added by dh_installinit">> debian/tpfand.postrm.debhelper
+	sed "s/#SCRIPT#/tpfand/;s/#INITPARMS#/defaults/;s/#ERROR_HANDLER#/exit \$?/" /usr/share/debhelper/autoscripts/postrm-init >> debian/tpfand.postrm.debhelper
+	echo '# End automatically added section' >> debian/tpfand.postrm.debhelper
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+	cd debian/tpfand
+	chmod a-x usr/share/man/man8/tpfand.8 usr/share/doc/tpfand/changelog
+	gzip -9nf usr/share/man/man8/tpfand.8 usr/share/doc/tpfand/changelog
+	cd '/home/vs/testsvn/buildarea/tpfand-0.95.2'
+   dh_fixperms
+	find debian/tpfand  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/tpfand ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/tpfand/usr/share/doc -type f  ! -regex 'debian/tpfand/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/tpfand/usr/share/man debian/tpfand/usr/man/ debian/tpfand/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand/usr/lib/perl5 debian/tpfand/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/tpfand/usr/sbin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/tpfand/etc/init.d -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+   dh_strip
+   dh_makeshlibs
+	rm -f debian/tpfand/DEBIAN/shlibs
+   dh_shlibdeps
+   dh_installdeb
+	perl -pe 's~#DEBHELPER#~qx{cat debian/tpfand.postinst.debhelper}~eg' < debian/postinst > debian/tpfand/DEBIAN/postinst
+	chown 0:0 debian/tpfand/DEBIAN/postinst
+	chmod 755 debian/tpfand/DEBIAN/postinst
+	sed s/#DEBHELPER#// < debian/preinst > debian/tpfand/DEBIAN/preinst
+	chown 0:0 debian/tpfand/DEBIAN/preinst
+	chmod 755 debian/tpfand/DEBIAN/preinst
+	perl -pe 's~#DEBHELPER#~qx{cat debian/tpfand.prerm.debhelper}~eg' < debian/prerm > debian/tpfand/DEBIAN/prerm
+	chown 0:0 debian/tpfand/DEBIAN/prerm
+	chmod 755 debian/tpfand/DEBIAN/prerm
+	perl -pe 's~#DEBHELPER#~qx{cat debian/tpfand.postrm.debhelper}~eg' < debian/postrm > debian/tpfand/DEBIAN/postrm
+	chown 0:0 debian/tpfand/DEBIAN/postrm
+	chmod 755 debian/tpfand/DEBIAN/postrm
+	find debian/tpfand/etc -type f -printf '/etc/%P
+' >> debian/tpfand/DEBIAN/conffiles
+	chmod 644 debian/tpfand/DEBIAN/conffiles
+   dh_gencontrol
+	echo misc:Depends= >> debian/tpfand.substvars
+	dpkg-gencontrol -ldebian/changelog -Tdebian/tpfand.substvars -Pdebian/tpfand
+dpkg-gencontrol: Warnung: Paket tpfand: unbenutzte Substitutionsvariable ${python:Versions}
+	chmod 644 debian/tpfand/DEBIAN/control
+	chown 0:0 debian/tpfand/DEBIAN/control
+   dh_md5sums
+	(cd debian/tpfand >/dev/null ; find . -type f ! -path "./etc/dbus-1/system.d/tpfand.conf" ! -path "./etc/tpfand.conf" ! -path "./etc/acpi/resume.d/91-tpfand-start.sh" ! -path "./etc/acpi/suspend.d/09-tpfand-stop.sh" ! -path "./etc/init.d/tpfand" ! -path "./etc/modprobe.d/tpfand.conf"  ! -regex '.*/DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/tpfand/DEBIAN/md5sums
+	chown 0:0 debian/tpfand/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/tpfand ..
+dpkg-deb: Paket »tpfand« wird in »../tpfand_0.95.2_all.deb« gebaut.
+ dpkg-genchanges  >../tpfand_0.95.2_i386.changes
+dpkg-genchanges: kompletter Quellcode beim Hochladen hinzufügen
+ dpkg-source --after-build tpfand-0.95.2
+dpkg-buildpackage: Alles hochzuladen; Debian-native-Paket (komplette Quellen enthalten)
+Now running lintian...
+W: tpfand source: out-of-date-standards-version 3.9.1 (current is 3.9.2)
+W: tpfand: latest-debian-changelog-entry-changed-to-native
+W: tpfand: debian-changelog-line-too-long line 3
+Finished running lintian.
