@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 4
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 1500.000000
 
 comment = This is my first revision for the T60p Core Duo 2.33 w FireGL V5200.\nQuiet Mode is only possible when the low power state is set on the GPU, to do this: \naticonfig --lsp to list powerstates\naticonfig --set-powerstate=1\n100% cooling kicks in for the GPU at 85 °C., I've never had a crash below this temperature and the FireGL V5200 runs hot typically. (submitted by kellygp@gmail.com)
 

@@ -22,8 +22,5 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 2
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 10000.000000
 
 

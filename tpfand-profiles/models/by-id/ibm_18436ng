@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 1
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 1000.000000
 
 comment = For all 100% sections i would rather use the "unleashed" mode. But for some reason I cant set it. The Button is always grey out.\nEverything else works fine. Thanks and keep up your good work! (submitted anonymously)
 

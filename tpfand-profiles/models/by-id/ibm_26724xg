@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 2
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 5000.000000
 
 comment = Even though the computer is very normally I think it tends to get to hot, so now I have made a profile to force a bit cooler. (submitted by tjansson60@gmail.com)
 

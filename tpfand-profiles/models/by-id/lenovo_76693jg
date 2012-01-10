@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 2
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 5020.000000
 
 comment = I found out that the iwl4965 adapter (Sensor 1 and Sensor 2) has a max temp of 53 so turning on fan control at 50 seems a bit close for comfort for me. I have now reset them to 48. But unless you use power saving on the WLAN interface then the fan will kick in and take quite a while before going off again. I use:\n\nfor i in `echo /sys/bus/pci/drivers/iwl4965/*/power_level`; do\necho 5 > $i\ndone\n\nas root to turn the power saving on on the WLAN. (submitted by wm.wragg@yahoo.co.uk)
 

@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 3
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 20000.000000
 
 comment = no fan until 55°, then cool down to 50° at 60% fan again (submitted by christian@kieft.de)
 

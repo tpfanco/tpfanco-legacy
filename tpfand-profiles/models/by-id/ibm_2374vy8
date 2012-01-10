@@ -22,9 +22,6 @@
 15. Sensor 15 = 0:255 
 
 hysteresis = 5
-interval_speed = 2
-interval_duration = 500.000000
-interval_delay = 0.000000
 
 comment = The Pentium M cpu working range up to 100 degrees C according to manufacturer!\nSo started fan at 60 for 30% and then for 100% when reaches 70.\nUnder sustained load with good ventilation and room temp. 22 degrees C. the temp of cpu is often 80 with fan running at max.\n (submitted by STFWIL001@uct.ac.za)
 
