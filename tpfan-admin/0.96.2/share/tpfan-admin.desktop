@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=ThinkPad Fan Control
+Comment=Shows system temperatures and configures fan trigger points
+Exec=/usr/bin/tpfan-admin
+Icon=/usr/share/tpfan-admin/tpfan-admin-128x128.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;System;Settings;
+

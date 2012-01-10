@@ -1,0 +1,347 @@
+# Russian translation for tp-fan
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the tp-fan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tp-fan\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-04-18 19:28+0200\n"
+"PO-Revision-Date: 2012-01-04 11:20+0000\n"
+"Last-Translator: Photon <michael.kogan@gmx.net>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-01-04 18:56+0000\n"
+"X-Generator: Launchpad (build 14616)\n"
+
+#: src/tpfanadmin/fan.py:63
+msgid "Click to turn fan animation on/off"
+msgstr "Нажать, чтобы включить или выключить анимацию вентилятора"
+
+#: src/tpfanadmin/globals.py:85
+msgid ""
+"Unable to connect to ThinkPad Fan Control daemon (tpfand).\n"
+"\n"
+"Please make sure you are running this program on a supported IBM/Lenovo "
+"ThinkPad, a recent thinkpad_acpi module is loaded with fan_control=1 and "
+"tpfand has been started."
+msgstr ""
+"Не удалось подсоединиться к службе ThinkPad Fan Control (tpfand).\n"
+"\n"
+"Пожалуйста, убедитесь, что вы используете данное приложение на одном из "
+"поддерживаемых IBM/Lenovo ThinkPad, загружена последняя версия модуля "
+"thinkpad_acpi с опцией fan_control=1, а также служба tpfand запущена."
+
+#: src/tpfanadmin/globals.py:87 src/tpfanadmin/globals.py:97
+#: share/tpfan-admin.glade:55
+msgid "ThinkPad Fan Control Configuration"
+msgstr "Конфигурация ThinkPad Fan Control"
+
+#: src/tpfanadmin/globals.py:95
+#, python-format
+msgid ""
+"The version of the ThinkPad Fan Control daemon (tpfand) installed on your "
+"system is too old.\n"
+"\n"
+"This version of tpfan-admin requires tpfand %s or later, however tpfand %s "
+"is installed on your system."
+msgstr ""
+"Версия служба ThinkPad Fan Control (tpfand) установленная на вашей системе "
+"устарела.\n"
+"\n"
+"Эта версия tpfan-admin нуждается в tpfand %s или более поздней версии "
+"tpfand, а на вашей системе установлен tpfand %s."
+
+#: src/tpfanadmin/temperaturedialog.py:53
+msgid ""
+"By enabling software control of the system fan, you can damage or shorten "
+"the lifespan of your notebook.\n"
+"\n"
+"IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL "
+"ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE "
+"THE PROGRAM, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, "
+"INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO "
+"USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING "
+"RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE "
+"OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR "
+"OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.\n"
+"\n"
+"Are you sure that you want to enable software control of the system fan?"
+msgstr ""
+"Включая управление системного вентилятора программой вы можете повредить ваш "
+"ноутбук или понизить срок его жизни.\n"
+"\n"
+"НИ В КОЕМ СЛУЧАЕ, ЕСЛИ НЕ ТРЕБУЕТСЯ ПРИМЕНИМЫМ ЗАКОНОМ ИЛИ ПИСЬМЕННЫМ "
+"СОГЛАШЕНИЕМ, НИ ОДИН ИЗ ПРАВООБЛАДАТЕЛЕЙ ИЛИ СТОРОН, ИЗМЕНЯВШИХ И/ИЛИ "
+"ПЕРЕДАВАВШИХ ПРОГРАММУ, КАК БЫЛО РАЗРЕШЕНО ВЫШЕ, НЕ ОТВЕТСТВЕНЕН ЗА УЩЕРБ, "
+"ВКЛЮЧАЯ ОБЩИЙ, КОНКРЕТНЫЙ, СЛУЧАЙНЫЙ ИЛИ ПОСЛЕДОВАВШИЙ УЩЕРБ, ВЫТЕКАЮЩИЙ ИЗ "
+"ИСПОЛЬЗОВАНИЯ ИЛИ НЕВОЗМОЖНОСТИ ИСПОЛЬЗОВАНИЯ ПРОГРАММЫ (ВКЛЮЧАЯ, НО НЕ "
+"ОГРАНИЧИВАЯСЬ ПОТЕРЕЙ ДАННЫХ ИЛИ НЕВЕРНОЙ ОБРАБОТКОЙ ДАННЫХ, ИЛИ ПОТЕРИ, "
+"УСТАНОВЛЕННЫЕ ВАМИ ИЛИ ТРЕТЬИМИ ЛИЦАМИ, ИЛИ НЕВОЗМОЖНОСТЬ ПРОГРАММЫ РАБОТАТЬ "
+"С ДРУГИМИ ПРОГРАММАМИ), ДАЖЕ В СЛУЧАЕ ЕСЛИ ПРАВООБЛАДАТЕЛЬ ЛИБО ДРУГАЯ "
+"СТОРОНА БЫЛА ИЗВЕЩЕНА О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА.\n"
+"\n"
+"Вы уверены, что хотите включить управление системного вентилятора программой?"
+
+#: src/tpfanadmin/temperaturedialog.py:66
+msgid ""
+"By disabling manual configuration your custom settings will be lost.\n"
+"\n"
+"Are you sure that you want to disable the manual configuration?"
+msgstr ""
+"При отключении ручной конфигурации все индивидуальные настройки будут "
+"потеряны.\n"
+"\n"
+"Вы уверены, что хотите отключить ручную конфигурацию?"
+
+#: src/tpfanadmin/temperaturedialog.py:70
+#, python-format
+msgid ""
+"Submitting your fan profile to the developers of ThinkPad Fan Control allows "
+"them to integrate it into the next version of this software.\n"
+"\n"
+"%s\n"
+"\n"
+"Please make sure that your notebook is quiet and not overheating with your "
+"current settings.\n"
+"\n"
+"Are you sure that you want to submit your profile now?"
+msgstr ""
+"Отсылка вашего профиля управления вентилятором разработчикам ThinkPad Fan "
+"Control позволит им включить его в следующую версию данной программы.\n"
+"\n"
+"%s\n"
+"\n"
+"Пожалуйста, убедитесь, что ваш ноутбук тих и не перегревается с текущими "
+"настройками.\n"
+"\n"
+"Вы уверены, что хотите отослать ваш профиль?"
+
+#: src/tpfanadmin/temperaturedialog.py:77
+msgid ""
+"A fan profile for your notebook model already exists. Please only submit "
+"your custom fan profile if it leads to better results than the non-manual "
+"configuration of ThinkPad Fan Control on your notebook."
+msgstr ""
+"Профиль управления вентилятором для вашей модели ноутбука уже существует. "
+"Пожалуйста, отсылайте ваш профиль только в том случае, если он даёт лучшие "
+"результаты чем автоматическая конфигурация ThinkPad Fan Control."
+
+#: src/tpfanadmin/temperaturedialog.py:82
+msgid ""
+"No fan profile exists for your notebook at this time. Your submission is "
+"appreciated."
+msgstr ""
+"На данный момент профиля управления вентилятором для вашего ноутбука не "
+"существует. Заранее благодарим за отсылку вашего профиля."
+
+#: src/tpfanadmin/temperaturedialog.py:159
+msgid ""
+"Monitors the temperature and controls the \n"
+"fan-speed of IBM/Lenovo ThinkPad Notebooks"
+msgstr ""
+"Наблюдает температуру и управляет скоростью \n"
+"вентилятора ноутбуков IBM/Lenovo ThinkPad"
+
+#: src/tpfanadmin/temperaturedialog.py:161
+#, python-format
+msgid ""
+"Daemon (tpfand) version: %s\n"
+"GTK+ configuration UI (tpfan-admin) version: %s\n"
+"\n"
+msgstr ""
+"Версия службы (tpfand): %s\n"
+"Версия интерфейса GTK+ конфигурации (tpfan-admin): %s\n"
+"\n"
+
+#: src/tpfanadmin/temperaturedialog.py:249
+msgid "No profile is used because you enabled manual configuration."
+msgstr "Профили не используются, так как вы используете ручную конфигурацию."
+
+#: src/tpfanadmin/temperaturedialog.py:302
+msgid "Unlocked"
+msgstr "Разблокировано"
+
+#: src/tpfanadmin/temperaturedialog.py:311 share/tpfan-admin.glade:689
+msgid "Unlock"
+msgstr "Разблокировать"
+
+#: src/tpfanadmin/temperaturedialog.py:436
+#, python-format
+msgid "%d RPM%s"
+msgstr "%d об/мин%s"
+
+#: src/tpfanadmin/temperaturedialog.py:438
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: src/tpfanadmin/thermometer.py:85
+msgid "off"
+msgstr "выкл."
+
+#: src/tpfanadmin/thermometer.py:86
+msgid "interval"
+msgstr "интервал"
+
+#: src/tpfanadmin/thermometer.py:87
+msgid "15%"
+msgstr "15%"
+
+#: src/tpfanadmin/thermometer.py:88
+msgid "30%"
+msgstr "30%"
+
+#: src/tpfanadmin/thermometer.py:89
+msgid "45%"
+msgstr "45%"
+
+#: src/tpfanadmin/thermometer.py:90
+msgid "60%"
+msgstr "60%"
+
+#: src/tpfanadmin/thermometer.py:91
+msgid "75%"
+msgstr "75%"
+
+#: src/tpfanadmin/thermometer.py:92
+msgid "90%"
+msgstr "90%"
+
+#: src/tpfanadmin/thermometer.py:93
+msgid "100%"
+msgstr "100%"
+
+#: src/tpfanadmin/thermometer.py:94
+msgid "hw-ctrld"
+msgstr "апп.-упр."
+
+#: src/tpfanadmin/thermometer.py:110
+msgid "Split"
+msgstr "Разделить"
+
+#: src/tpfanadmin/thermometer.py:115
+msgid "Remove"
+msgstr "Удалить"
+
+#: src/tpfanadmin/thermometer.py:287
+#, python-format
+msgid "Name for temperature sensor %d"
+msgstr "Название температурного датчика %d"
+
+#: share/tpfan-admin.glade:8
+msgid "ThinkPad Fan Control"
+msgstr "ThinkPad Fan Control"
+
+#: share/tpfan-admin.glade:16
+msgid ""
+"Monitors the temperature and controls the fan-speed of IBM/Lenovo ThinkPad "
+"Notebooks"
+msgstr ""
+"Наблюдает температуру и управляет скоростью вентилятора ноутбуков IBM/Lenovo "
+"ThinkPad"
+
+#: share/tpfan-admin.glade:78
+msgid "<b>Control system fan by software</b>"
+msgstr "<b>Управлять системным вентилятором с помощью приложения</b>"
+
+#: share/tpfan-admin.glade:97
+msgid ""
+"Allows you to make your computer quieter by configuring the system fan to "
+"turn on at higher temperatures \n"
+"than specified by the manufacturer.\n"
+"<b>You can damage or shorten the lifespan of your computer by allowing too "
+"high temperatures.</b>"
+msgstr ""
+"Позволяет сделать ноутбук тише, настраивая вентилятор таким образом, что он "
+"включается при более высоких \n"
+"температурах, чем указанно производителем.\n"
+"<b>Вы можете повредить ноутбук слишком высокими температурами или понизить "
+"срок его жизни.</b>"
+
+#: share/tpfan-admin.glade:122
+msgid "<b>Temperatures</b>"
+msgstr "<b>Температуры</b>"
+
+#: share/tpfan-admin.glade:148
+msgid "Manually configure system fan trigger temperatures"
+msgstr "Настраивать температуры переключения вентилятора вручную"
+
+#: share/tpfan-admin.glade:209
+msgid "°C"
+msgstr "°C"
+
+#: share/tpfan-admin.glade:227
+msgid "°F"
+msgstr "°F"
+
+#: share/tpfan-admin.glade:277
+msgid "Hysteresis"
+msgstr "Гистерезис"
+
+#: share/tpfan-admin.glade:306
+msgid "°K"
+msgstr "°K"
+
+#: share/tpfan-admin.glade:333
+msgid "Interval cooling mode: duration of an interval"
+msgstr "Режим интервального охлаждения: длительность интервала"
+
+#: share/tpfan-admin.glade:363 share/tpfan-admin.glade:422
+msgid " s "
+msgstr " сек "
+
+#: share/tpfan-admin.glade:390
+msgid "Interval cooling mode: minimum delay between intervals"
+msgstr ""
+"Режим интервального охлаждения: минимальное расстояние между интервалами"
+
+#: share/tpfan-admin.glade:459
+msgid "Advanced options"
+msgstr "Дополнительные настройки"
+
+#: share/tpfan-admin.glade:498
+msgid "<b>Monitoring</b>"
+msgstr "<b>Наблюдение</b>"
+
+#: share/tpfan-admin.glade:527
+msgid "Profile comments"
+msgstr "Комментарии к профилю"
+
+#: share/tpfan-admin.glade:547
+msgid "Profile information"
+msgstr "Информация о профиле"
+
+#: share/tpfan-admin.glade:588
+msgid "Used fan profiles"
+msgstr "Используемый профиль"
+
+#: share/tpfan-admin.glade:601
+msgid "Notebook model"
+msgstr "Модель ноутбука"
+
+#: share/tpfan-admin.glade:663
+msgid "gtk-about"
+msgstr "gtk-about"
+
+#: share/tpfan-admin.glade:676
+msgid "Submit profile..."
+msgstr "Отослать профиль..."
+
+#: share/tpfan-admin.glade:702
+msgid "gtk-close"
+msgstr "gtk-close"
+
+#: share/tpfan-admin.glade:721
+msgid "Change sensor name"
+msgstr "Изменить название датчика"
+
+#: share/tpfan-admin.glade:776
+msgid "gtk-ok"
+msgstr "gtk-ok"
+
+#: share/tpfan-admin.glade:786
+msgid "gtk-cancel"
+msgstr "gtk-cancel"
