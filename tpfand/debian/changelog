@@ -1,8 +1,10 @@
-tpfand (0.95-ubuntu4) UNRELEASED; urgency=low
+tpfand (0.95.2) oneiric; urgency=low
 
-  * NOT RELEASED YET
+  * fix fan pulsing on T410s (thanks to Shad for testing!)
+  * remove interval mode
+  * add debug mode. To activate stop tpfand ('sudo /etc/init.d/tpfand stop') and run 'sudo /usr/sbin/tpfand --debug'
 
- -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 18 Sep 2011 00:31:01 +0200
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Wed, 11 Jan 2012 00:31:30 +0100
 
 tpfand (0.95-ubuntu3) natty; urgency=low
 
