@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Wed, 11 Jan 2012 00:43:48 +0100
+Source: tpfan-admin
+Binary: tpfan-admin
+Architecture: source all
+Version: 0.96.2
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfan-admin - Graphical configuration and monitoring interface for tpfand
+Changes: 
+ tpfan-admin (0.96.2) oneiric; urgency=low
+ .
+   * remove interval mode
+   * don't show disconnected sensors
+Checksums-Sha1: 
+ ce50e2b788a8a9cdee5a6ea78c2abbbfc457510d 590 tpfan-admin_0.96.2.dsc
+ 8a99cc87fff7647ecba0618fb367b7b5467e2cd6 97518 tpfan-admin_0.96.2.tar.gz
+ 8d6a371fd5fbe94f0f4720eb582fafe020d0c63f 73044 tpfan-admin_0.96.2_all.deb
+Checksums-Sha256: 
+ b7dfbe282e28b02ed3d12bfa794b5b083fd5031ef0a08c8416cca30f399ae499 590 tpfan-admin_0.96.2.dsc
+ aae044eccc8b968786259290051c8b667aed85e742206470357154b5e48bbe11 97518 tpfan-admin_0.96.2.tar.gz
+ 8badea1f70cd1c30574f15677a1376be39fd17e6372c4d91f164f79931630df0 73044 tpfan-admin_0.96.2_all.deb
+Files: 
+ f629ea489a979ddfc9fee5c6f1ec86ae 590 admin optional tpfan-admin_0.96.2.dsc
+ ccbba4e6e9d15b76d53f7c29abdb43cb 97518 admin optional tpfan-admin_0.96.2.tar.gz
+ 3b7d124b89ca5e67d3c1268fa593c3eb 73044 admin optional tpfan-admin_0.96.2_all.deb
