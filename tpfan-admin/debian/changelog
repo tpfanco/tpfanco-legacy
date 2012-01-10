@@ -1,8 +1,9 @@
-tpfan-admin (0.96-ubuntu3) UNRELEASED; urgency=low
+tpfan-admin (0.96.2) oneiric; urgency=low
 
-  * NOT RELEASED YET
+  * remove interval mode
+  * don't show disconnected sensors
 
- -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 23:09:10 +0200
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Wed, 11 Jan 2012 00:43:48 +0100
 
 tpfan-admin (0.96-ubuntu2) natty; urgency=low
 
