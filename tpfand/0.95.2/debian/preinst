@@ -1,0 +1,31 @@
+#!/bin/sh
+# preinst script for tpfand
+
+set -e
+
+
+case "$1" in
+    install)
+    ;;
+
+    upgrade)
+        # remove old runlevel configuration due to missing
+        # dependencies in old versions
+        if [ "$2" = "0.90rc1-1" -o "$2" = "0.90rc2-1" -o "$2" = "0.90rc2-2" -o "$2" = "0.90rc2-3" ]
+        then
+            echo "Upgrading old runlevel configuration for tpfand..."
+            update-rc.d -f tpfand remove
+        fi
+    ;;
+    abort-upgrade)
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

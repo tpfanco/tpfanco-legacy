@@ -1,0 +1,21 @@
+#!/bin/sh
+# postrm script for tpfand
+
+set -e
+
+case "$1" in
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    ;;
+    purge)
+        echo "Removing /etc/tpfand.conf"
+        rm -f /etc/tpfand.conf
+    ;;
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
