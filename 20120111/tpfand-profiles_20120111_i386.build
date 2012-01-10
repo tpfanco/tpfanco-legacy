@@ -1,0 +1,145 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -ai386
+dpkg-buildpackage: exportieren von CFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von CPPFLAGS aus dpkg-buildflags (Quelle: vendor): 
+dpkg-buildpackage: exportieren von CXXFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von FFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von LDFLAGS aus dpkg-buildflags (Quelle: vendor): -Wl,-Bsymbolic-functions
+dpkg-buildpackage: Quellpaket tpfand-profiles
+dpkg-buildpackage: Quellversion 20120111
+dpkg-buildpackage: Quellen geändert durch Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+ dpkg-source --before-build tpfand-profiles-20120111
+dpkg-buildpackage: Host-Architektur i386
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+	rm -f debian/tpfand-profiles.substvars
+	rm -f debian/tpfand-profiles.*.debhelper
+	rm -rf debian/tpfand-profiles/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+	rm -f *-stamp
+ dpkg-source -b tpfand-profiles-20120111
+dpkg-source: Information: Quellformat »3.0 (native)« wird verwendet
+dpkg-source: Information: tpfand-profiles wird in tpfand-profiles_20120111.tar.gz gebaut
+dpkg-source: Information: tpfand-profiles wird in tpfand-profiles_20120111.dsc gebaut
+ debian/rules build
+dh build 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+	make -j1
+make[1]: Betrete Verzeichnis '/home/vs/testsvn/buildarea/tpfand-profiles-20120111'
+make[1]: Für das Ziel »all« ist nichts zu tun.
+make[1]: Verlasse Verzeichnis '/home/vs/testsvn/buildarea/tpfand-profiles-20120111'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+	rm -f debian/tpfand-profiles.substvars
+	rm -f debian/tpfand-profiles.*.debhelper
+	rm -rf debian/tpfand-profiles/
+   dh_installdirs
+	install -d debian/tpfand-profiles
+   dh_auto_install
+	make -j1 install DESTDIR=/home/vs/testsvn/buildarea/tpfand-profiles-20120111/debian/tpfand-profiles
+make[1]: Betrete Verzeichnis '/home/vs/testsvn/buildarea/tpfand-profiles-20120111'
+install -d /home/vs/testsvn/buildarea/tpfand-profiles-20120111/debian/tpfand-profiles/usr/share/tpfand/models
+install -d /home/vs/testsvn/buildarea/tpfand-profiles-20120111/debian/tpfand-profiles/usr/share/tpfand/models/by-id
+install -m 644 models/by-id/* /home/vs/testsvn/buildarea/tpfand-profiles-20120111/debian/tpfand-profiles/usr/share/tpfand/models/by-id
+install -d /home/vs/testsvn/buildarea/tpfand-profiles-20120111/debian/tpfand-profiles/usr/share/tpfand/models/by-name	
+echo Installation complete.	
+Installation complete.
+make[1]: Verlasse Verzeichnis '/home/vs/testsvn/buildarea/tpfand-profiles-20120111'
+   dh_install
+   dh_installdocs
+	install -g 0 -o 0 -d debian/tpfand-profiles/usr/share/doc/tpfand-profiles
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/tpfand-profiles/usr/share/doc/tpfand-profiles/copyright
+   dh_installchangelogs
+	install -o 0 -g 0 -p -m644 debian/changelog debian/tpfand-profiles/usr/share/doc/tpfand-profiles/changelog
+   dh_installexamples
+   dh_installman
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+	install -o 0 -g 0 -d debian/tpfand-profiles/DEBIAN
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+	/usr/share/python-support/private/movemodules --prefix /usr debian/tpfand-profiles
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+	cd debian/tpfand-profiles
+	chmod a-x usr/share/doc/tpfand-profiles/changelog
+	gzip -9nf usr/share/doc/tpfand-profiles/changelog
+	cd '/home/vs/testsvn/buildarea/tpfand-profiles-20120111'
+   dh_fixperms
+	find debian/tpfand-profiles  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/tpfand-profiles ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/tpfand-profiles/usr/share/doc -type f  ! -regex 'debian/tpfand-profiles/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/tpfand-profiles/usr/share/man debian/tpfand-profiles/usr/man/ debian/tpfand-profiles/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tpfand-profiles/usr/lib/perl5 debian/tpfand-profiles/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+   dh_strip
+   dh_makeshlibs
+	rm -f debian/tpfand-profiles/DEBIAN/shlibs
+   dh_shlibdeps
+   dh_installdeb
+	sed s/#DEBHELPER#// < debian/postinst > debian/tpfand-profiles/DEBIAN/postinst
+	chown 0:0 debian/tpfand-profiles/DEBIAN/postinst
+	chmod 755 debian/tpfand-profiles/DEBIAN/postinst
+	sed s/#DEBHELPER#// < debian/postrm > debian/tpfand-profiles/DEBIAN/postrm
+	chown 0:0 debian/tpfand-profiles/DEBIAN/postrm
+	chmod 755 debian/tpfand-profiles/DEBIAN/postrm
+   dh_gencontrol
+	echo misc:Depends= >> debian/tpfand-profiles.substvars
+	dpkg-gencontrol -ldebian/changelog -Tdebian/tpfand-profiles.substvars -Pdebian/tpfand-profiles
+	chmod 644 debian/tpfand-profiles/DEBIAN/control
+	chown 0:0 debian/tpfand-profiles/DEBIAN/control
+   dh_md5sums
+	(cd debian/tpfand-profiles >/dev/null ; find . -type f  ! -regex '.*/DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/tpfand-profiles/DEBIAN/md5sums
+	chown 0:0 debian/tpfand-profiles/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/tpfand-profiles ..
+dpkg-deb: Paket »tpfand-profiles« wird in »../tpfand-profiles_20120111_all.deb« gebaut.
+ dpkg-genchanges  >../tpfand-profiles_20120111_i386.changes
+dpkg-genchanges: kompletter Quellcode beim Hochladen hinzufügen
+ dpkg-source --after-build tpfand-profiles-20120111
+dpkg-buildpackage: Alles hochzuladen; Debian-native-Paket (komplette Quellen enthalten)
+Now running lintian...
+W: tpfand-profiles source: out-of-date-standards-version 3.9.1 (current is 3.9.2)
+Finished running lintian.

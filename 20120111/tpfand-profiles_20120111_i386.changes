@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Wed, 11 Jan 2012 00:41:26 +0100
+Source: tpfand-profiles
+Binary: tpfand-profiles
+Architecture: source all
+Version: 20120111
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand-profiles - Fan temperature profiles for tpfand
+Changes: 
+ tpfand-profiles (20120111) oneiric; urgency=low
+ .
+   * remove some profiles that contained the from now on
+     unsuppored interval mode
+Checksums-Sha1: 
+ b105d5f7267347f0655fe46e699efb34ec020172 579 tpfand-profiles_20120111.dsc
+ 56d1b870c91f532ad6d9237d991608dd2da1b29d 13185 tpfand-profiles_20120111.tar.gz
+ 0ff48b2ef13ffdb36754b55438474ac12d6a8b22 14350 tpfand-profiles_20120111_all.deb
+Checksums-Sha256: 
+ 3cb8380966442da993233a73975497134044873b7d95e3ff3017d9a4353bccce 579 tpfand-profiles_20120111.dsc
+ f59fda37128e0eaecdebcbfa5bb0c4bd546ac86e260dc0ef5fe6679527e65dbd 13185 tpfand-profiles_20120111.tar.gz
+ 1bf0c60f6fc71f84a325773bf9718b0f841082878ca6f9a9889c459fe185b375 14350 tpfand-profiles_20120111_all.deb
+Files: 
+ 41776edfda2aac48e2a963f4defe8d9d 579 admin optional tpfand-profiles_20120111.dsc
+ abecdf4563edbfa7cceead2499ee3d89 13185 admin optional tpfand-profiles_20120111.tar.gz
+ d27c38e4823e19b8abb8502ef8c3d030 14350 admin optional tpfand-profiles_20120111_all.deb
