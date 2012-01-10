@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# tp-fancontrol - controls the fan-speed of IBM/Lenovo ThinkPad Notebooks
+# tpfanco - controls the fan-speed of IBM/Lenovo ThinkPad Notebooks
+# Copyright (C) 2011-2012 Vladyslav Shtabovenko
 # Copyright (C) 2007-2008 Sebastian Urban
 #
 # This program is free software: you can redistribute it and/or modify
@@ -55,7 +56,6 @@ locale_dir = data_dir + "locales"
 profile_submit_enabled = True
 
 # profile submit url
-#profile_submit_url = "http://www.gambitchess.org/tp-fan/profile_submit.py"
 profile_submit_url = ""
 
 # program to open url
@@ -64,7 +64,7 @@ profile_url_opener = ""
 
 # required tpfand version
 # ONLY CHANGE IF YOU KNOW WHAT YOU ARE DOING
-required_daemon_version = "0.94"
+required_daemon_version = "0.95.2"
 
 # version
-version = "0.96"
+version = "0.96.2"

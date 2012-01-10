@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# tp-fancontrol - controls the fan-speed of IBM/Lenovo ThinkPad Notebooks
+# tpfanco - controls the fan-speed of IBM/Lenovo ThinkPad Notebooks
+# Copyright (C) 2011-2012 Vladyslav Shtabovenko
 # Copyright (C) 2007-2008 Sebastian Urban
 #
 # This program is free software: you can redistribute it and/or modify
@@ -45,7 +46,7 @@ class TemperatureDialog:
     fan_graph_rpm_factor = 0.00001
     
     # desired window height, if screen permits it
-    desired_height = 660
+    desired_height = 680
     
     # reserved screen height
     reserved_screen_height = 50
