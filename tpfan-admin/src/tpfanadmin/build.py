@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # tpfanco - controls the fan-speed of IBM/Lenovo ThinkPad Notebooks
@@ -67,4 +67,4 @@ profile_url_opener = ""
 required_daemon_version = "0.95.2"
 
 # version
-version = "0.96.2"
+version = "0.96.3"
