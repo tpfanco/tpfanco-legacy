@@ -1,0 +1,41 @@
+tpfand-profiles (20120305) oneiric; urgency=low
+
+  * add new profile for X300 (6478-14G) (thanks to Oliver D.)
+
+ -- vs <vs@charmonium.vladnet.vvsnet>  Mon, 05 Mar 2012 23:00:57 +0100
+
+tpfand-profiles (20120111) oneiric; urgency=low
+
+  * remove some profiles that contained the from now on                                                                                     
+    unsuppored interval mode 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Wed, 11 Jan 2012 00:41:26 +0100
+
+tpfand-profiles (20120105) oneiric; urgency=low
+
+  * add new profile for T410s (thanks to Gregor K.)
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Thu, 05 Jan 2012 14:46:01 +0100
+
+tpfand-profiles (20110901-ubuntu3) natty; urgency=low
+
+  * add new profile for X201, thanks to gru3n3r from thinkpad-forum.de
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 06 Nov 2011 21:12:45 +0100
+
+tpfand-profiles (20110901-ubuntu2) natty; urgency=low
+
+  * first public release of the Tpfanco project
+  * add new profile for Z61m 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 20:16:19 +0200
+
+tpfand-profiles (20110901-ubuntu1) intrepid; urgency=low
+
+  [ Sebastian Urban ]
+  * snapshot on 09 Mar 2009
+
+  [ Vladyslav Shtabovenko ]
+  * 
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Fri, 02 Sep 2011 00:27:08 +0200
