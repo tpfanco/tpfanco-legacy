@@ -1,3 +1,9 @@
+tpfand-profiles (20120305) oneiric; urgency=low
+
+  * add new profile for X300 (6478-14G) (thanks to Oliver D.)
+
+ -- vs <vs@charmonium.vladnet.vvsnet>  Mon, 05 Mar 2012 23:00:57 +0100
+
 tpfand-profiles (20120111) oneiric; urgency=low
 
   * remove some profiles that contained the from now on                                                                                     
