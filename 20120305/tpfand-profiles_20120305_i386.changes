@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 05 Mar 2012 23:00:57 +0100
+Source: tpfand-profiles
+Binary: tpfand-profiles
+Architecture: source all
+Version: 20120305
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: vs <vs@charmonium.vladnet.vvsnet>
+Description: 
+ tpfand-profiles - Fan temperature profiles for tpfand
+Changes: 
+ tpfand-profiles (20120305) oneiric; urgency=low
+ .
+   * add new profile for X300 (6478-14G) (thanks to Oliver D.)
+Checksums-Sha1: 
+ 344a1be978db7794cb7cd2c1b235508b08b21248 579 tpfand-profiles_20120305.dsc
+ f9ebf55f6b9b102369f460b3069057734161cfd9 13101 tpfand-profiles_20120305.tar.gz
+ af5b727938da2e4886607f289dc727d687af4ee3 14688 tpfand-profiles_20120305_all.deb
+Checksums-Sha256: 
+ cc8683fe210d12d61aad73b4f40c15ec778cefe79c687eecabfc36aefd7d53d6 579 tpfand-profiles_20120305.dsc
+ 445c6c141deded8041111c9ccb410606d3932c6024147c6984292bf1d34df707 13101 tpfand-profiles_20120305.tar.gz
+ c8640e9b4b55311c509b3fc9b9b2576be7d2f167b4e19e6cca029fcd89df287c 14688 tpfand-profiles_20120305_all.deb
+Files: 
+ 77f6e16d251098c5c0ab59c639907b20 579 admin optional tpfand-profiles_20120305.dsc
+ a13efcdbcb0a0c39577431fb83131802 13101 admin optional tpfand-profiles_20120305.tar.gz
+ 974134baa909c8087eff0d505840b15f 14688 admin optional tpfand-profiles_20120305_all.deb
