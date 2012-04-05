@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://code.google.com/p/tpfanco/
 
 Package: tpfand-profiles
