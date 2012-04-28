@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sat, 28 Apr 2012 20:25:17 +0200
+Source: tpfand-profiles
+Binary: tpfand-profiles
+Architecture: source all
+Version: 20120428
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand-profiles - Fan temperature profiles for tpfand
+Changes: 
+ tpfand-profiles (20120428) oneiric; urgency=low
+ .
+   * add new profile for X121e (3045-6RG) (thanks to Ingo H.)
+Checksums-Sha1: 
+ 452d481b7694b784eb353be8436a459479c23970 579 tpfand-profiles_20120428.dsc
+ b13a19fa8e3f55737b45f0e349d540b8e0572f0b 13501 tpfand-profiles_20120428.tar.gz
+ 8d3b91cc5772b3e069673f5ac08080fb64426fde 14880 tpfand-profiles_20120428_all.deb
+Checksums-Sha256: 
+ e38ba0738d239a07c8311adc90c0891a76e4a381d3e866261981d37bd61aad59 579 tpfand-profiles_20120428.dsc
+ 5b20609be234cb1ff8fd4abfb2ded85149a5ce80417b6f469727513f3a996df1 13501 tpfand-profiles_20120428.tar.gz
+ e7d9dfbcf295c1301d141fea466c615690b6a2702fc939ca5c84acaee8326a65 14880 tpfand-profiles_20120428_all.deb
+Files: 
+ 043bbae6d483da993253375b8a457530 579 admin optional tpfand-profiles_20120428.dsc
+ ef3b0cb2421f98130ebbc6d5183fdb42 13501 admin optional tpfand-profiles_20120428.tar.gz
+ 273df71eb035d1e39bc7fee2f228756a 14880 admin optional tpfand-profiles_20120428_all.deb
