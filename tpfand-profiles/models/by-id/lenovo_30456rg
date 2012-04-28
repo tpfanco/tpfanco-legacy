@@ -1,0 +1,22 @@
+# Lenovo x121e 
+# Intel(R) Core(TM) i3-2357M CPU @ 1.30GHz
+# Product Name: 30456RG
+#
+0. CPU0 = 0:0 59:2 64:3 67:4 69:5 71:6 73:7 75:8 
+1. Sensor 1 = 0:255 
+2. CPU1 = 0:0 59:2 64:3 67:4 69:5 71:6 73:7 75:8 
+3. bus = 0:0 32:255 
+4. Sensor 4 = 0:255 
+5. Sensor 5 = 0:255 
+6. batt = 0:0 37:255 
+7. Sensor 7 = 0:255 
+8. Sensor 8 = 0:255 
+9. Sensor 9 = 0:255 
+10. Sensor 10 = 0:255 
+11. Sensor 11 = 0:255 
+12. Sensor 12 = 0:255 
+13. Sensor 13 = 0:255 
+14. Sensor 14 = 0:255 
+15. Sensor 15 = 0:255 
+
+hysteresis = 2
