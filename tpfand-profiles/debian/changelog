@@ -1,3 +1,9 @@
+tpfand-profiles (20120521) oneiric; urgency=low
+
+  * add new profile for L420 (78545HG) (thanks to Torsten R.)
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Mon, 21 May 2012 22:47:09 +0200
+
 tpfand-profiles (20120428) oneiric; urgency=low
 
   * add new profile for X121e (3045-6RG) (thanks to Ingo H.)
