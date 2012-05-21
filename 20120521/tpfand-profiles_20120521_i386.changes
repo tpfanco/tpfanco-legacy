@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 21 May 2012 22:47:09 +0200
+Source: tpfand-profiles
+Binary: tpfand-profiles
+Architecture: source all
+Version: 20120521
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfand-profiles - Fan temperature profiles for tpfand
+Changes: 
+ tpfand-profiles (20120521) oneiric; urgency=low
+ .
+   * add new profile for L420 (78545HG) (thanks to Torsten R.)
+Checksums-Sha1: 
+ b225c3cb910860e53cfac29cfe3abb22d86aea46 579 tpfand-profiles_20120521.dsc
+ b1ca4c8a9493382bfe72108dcb40e46bdd16e4ef 13395 tpfand-profiles_20120521.tar.gz
+ 969b5557c0664cc69bc599069c3d196579970f5b 15066 tpfand-profiles_20120521_all.deb
+Checksums-Sha256: 
+ 0883d564bf64e48754d2a35ff01f69ec44670aed1c82ee9b3b0daa3624720764 579 tpfand-profiles_20120521.dsc
+ 5d4f87e5cc7f9ee6efef18c91788712ccb32907231ad0a81620e3ef2a8428af8 13395 tpfand-profiles_20120521.tar.gz
+ 12aded0e3fca4e937cb6a50efb90b41fb602ec0bc3b02be5d532d0865c43e7c7 15066 tpfand-profiles_20120521_all.deb
+Files: 
+ cdb7f31379d73e184d243ccb7abe38e6 579 admin optional tpfand-profiles_20120521.dsc
+ 23c326374d4944993870297b7271c9bd 13395 admin optional tpfand-profiles_20120521.tar.gz
+ 5d3eb5fd67e67fd270e94285d07f751e 15066 admin optional tpfand-profiles_20120521_all.deb
