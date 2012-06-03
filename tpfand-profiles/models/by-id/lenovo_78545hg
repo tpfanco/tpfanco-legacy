@@ -15,4 +15,4 @@
 14. Sensor 14 = 0:255 
 15. Sensor 15 = 0:255 
 
-hysteresis = 5
+hysteresis = 3

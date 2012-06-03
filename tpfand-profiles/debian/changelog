@@ -1,3 +1,9 @@
+tpfand-profiles (20120603) oneiric; urgency=low
+
+  * small correction for the L420 profile (thanks to Torsten R.)
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Sun, 03 Jun 2012 16:27:09 +0200
+
 tpfand-profiles (20120521) oneiric; urgency=low
 
   * add new profile for L420 (78545HG) (thanks to Torsten R.)
