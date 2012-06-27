@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 27 Jun 2012 20:21:18 +0200
+Source: tpfan-admin
+Binary: tpfan-admin
+Architecture: source all
+Version: 0.96.3
+Distribution: oneiric
+Urgency: low
+Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Changed-By: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+Description: 
+ tpfan-admin - Graphical configuration and monitoring interface for tpfand
+Changes: 
+ tpfan-admin (0.96.3) oneiric; urgency=low
+ .
+   * accept kdesudo as gksudo alternative
+Checksums-Sha1: 
+ fb6046b2b2f933bb28dd47b760b1c1a915d53628 590 tpfan-admin_0.96.3.dsc
+ b3b72411b6262a80c6c0d519b417303b523036e1 94487 tpfan-admin_0.96.3.tar.gz
+ d0668e5bc564a7cefef5839891c9a140deb470bf 71818 tpfan-admin_0.96.3_all.deb
+Checksums-Sha256: 
+ 0972a574ade8906f7b686224a93a68af743b09eefd4b1b9e2f9b8b0d6eb5c7af 590 tpfan-admin_0.96.3.dsc
+ bf1e1fe7194390692212c10c6a29ba84ebffc59eb1df294be3ef25dd16002cab 94487 tpfan-admin_0.96.3.tar.gz
+ d0e207a5fca3a43ebaef793a006ea717c72e4279ed477f649d46a3cbc1a9bfe3 71818 tpfan-admin_0.96.3_all.deb
+Files: 
+ 2e50ea90ae41a38372332cf666cbd8a0 590 admin optional tpfan-admin_0.96.3.dsc
+ 3f63868120564dbe247b886af6fc8d05 94487 admin optional tpfan-admin_0.96.3.tar.gz
+ e241beb397a7899e75e452c21b34bd60 71818 admin optional tpfan-admin_0.96.3_all.deb

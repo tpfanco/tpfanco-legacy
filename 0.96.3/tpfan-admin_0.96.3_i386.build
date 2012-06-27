@@ -1,0 +1,136 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -ai386
+dpkg-buildpackage: exportieren von CFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von CPPFLAGS aus dpkg-buildflags (Quelle: vendor): 
+dpkg-buildpackage: exportieren von CXXFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von FFLAGS aus dpkg-buildflags (Quelle: vendor): -g -O2
+dpkg-buildpackage: exportieren von LDFLAGS aus dpkg-buildflags (Quelle: vendor): -Wl,-Bsymbolic-functions
+dpkg-buildpackage: Quellpaket tpfan-admin
+dpkg-buildpackage: Quellversion 0.96.3
+dpkg-buildpackage: Quellen geändert durch Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
+ dpkg-source --before-build tpfan-admin-0.96.3
+dpkg-buildpackage: Host-Architektur i386
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+make[1]: Betrete Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+rm -f tpfan-admin.1
+rm -f src/tpfanadmin/*.pyc
+rm -rf mo
+make[1]: Verlasse Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+   dh_clean
+ dpkg-source -b tpfan-admin-0.96.3
+dpkg-source: Information: Quellformat »3.0 (native)« wird verwendet
+dpkg-source: Information: tpfan-admin wird in tpfan-admin_0.96.3.tar.gz gebaut
+dpkg-source: Information: tpfan-admin wird in tpfan-admin_0.96.3.dsc gebaut
+ debian/rules build
+dh build 
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+make[1]: Betrete Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+pod2man --section=1 --release=Version\ `cat src/tpfanadmin/build.py | grep "^version = " | sed  -e "s/version = \"\(.*\)\"/\1/"` --center "" man/tpfan-admin.pod > tpfan-admin.1
+./compile_po.sh
+make[1]: Verlasse Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary 
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   dh_auto_install
+make[1]: Betrete Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+./compile_po.sh
+install -d /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/pyshared/tpfanadmin
+install -m 644 src/tpfanadmin/* /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/pyshared/tpfanadmin
+install -d /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/
+install -m 644 share/* /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/
+install -d /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/bin
+install -m 755 wrappers/tpfan-admin /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/bin/
+install -d /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/
+cp -av mo/* /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/
+„mo/af“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/af“
+„mo/af/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/af/LC_MESSAGES“
+„mo/af/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/af/LC_MESSAGES/tpfan-admin.mo“
+„mo/de“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/de“
+„mo/de/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/de/LC_MESSAGES“
+„mo/de/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/de/LC_MESSAGES/tpfan-admin.mo“
+„mo/es“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/es“
+„mo/es/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/es/LC_MESSAGES“
+„mo/es/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/es/LC_MESSAGES/tpfan-admin.mo“
+„mo/fr“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/fr“
+„mo/fr/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/fr/LC_MESSAGES“
+„mo/fr/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/fr/LC_MESSAGES/tpfan-admin.mo“
+„mo/gl“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/gl“
+„mo/gl/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/gl/LC_MESSAGES“
+„mo/gl/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/gl/LC_MESSAGES/tpfan-admin.mo“
+„mo/he“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/he“
+„mo/he/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/he/LC_MESSAGES“
+„mo/he/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/he/LC_MESSAGES/tpfan-admin.mo“
+„mo/it“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/it“
+„mo/it/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/it/LC_MESSAGES“
+„mo/it/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/it/LC_MESSAGES/tpfan-admin.mo“
+„mo/pt_BR“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/pt_BR“
+„mo/pt_BR/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/pt_BR/LC_MESSAGES“
+„mo/pt_BR/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/pt_BR/LC_MESSAGES/tpfan-admin.mo“
+„mo/ru“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/ru“
+„mo/ru/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/ru/LC_MESSAGES“
+„mo/ru/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/ru/LC_MESSAGES/tpfan-admin.mo“
+„mo/sv“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/sv“
+„mo/sv/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/sv/LC_MESSAGES“
+„mo/sv/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/sv/LC_MESSAGES/tpfan-admin.mo“
+„mo/zh_CN“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/zh_CN“
+„mo/zh_CN/LC_MESSAGES“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/zh_CN/LC_MESSAGES“
+„mo/zh_CN/LC_MESSAGES/tpfan-admin.mo“ -> „/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/tpfan-admin/locales/zh_CN/LC_MESSAGES/tpfan-admin.mo“
+install -d /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/applications
+install -m 644 share/tpfan-admin.desktop /home/vs/svn_projects/buildarea/tpfan-admin-0.96.3/debian/tpfan-admin/usr/share/applications
+make[1]: Verlasse Verzeichnis '/home/vs/svn_projects/buildarea/tpfan-admin-0.96.3'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_pysupport
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: Warnung: Paket tpfan-admin: unbenutzte Substitutionsvariable ${python:Versions}
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: Paket »tpfan-admin« wird in »../tpfan-admin_0.96.3_all.deb« gebaut.
+ dpkg-genchanges  >../tpfan-admin_0.96.3_i386.changes
+dpkg-genchanges: kompletter Quellcode beim Hochladen hinzufügen
+ dpkg-source --after-build tpfan-admin-0.96.3
+dpkg-buildpackage: Alles hochzuladen; Debian-native-Paket (komplette Quellen enthalten)
+Now running lintian...
+Finished running lintian.
