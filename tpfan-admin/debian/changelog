@@ -1,3 +1,9 @@
+tpfan-admin (0.96.3) oneiric; urgency=low
+
+  * accept kdesudo as gksudo alternative
+
+ -- Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>  Wed, 27 Jun 2012 20:21:18 +0200
+
 tpfan-admin (0.96.2) oneiric; urgency=low
 
   * remove interval mode
