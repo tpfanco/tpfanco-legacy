@@ -9,7 +9,7 @@ Homepage: http://code.google.com/p/tpfanco/
 
 Package: tpfan-admin
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-central (>= 0.6.11), dbus (>= 1.1.20), python-gtk2 (>= 2.12), python-dbus (>= 0.82), gksu | kdesudo, python-cairo (>= 1.4), python-glade2 (>= 2.12), python-rsvg (>=2.30.0), xdg-utils, tpfand (>= 0.95.2)
+Depends: ${misc:Depends}, ${python:Depends}, dh-python, dbus (>= 1.1.20), python-gtk2 (>= 2.12), python-dbus (>= 0.82), gksu | kdesudo, python-cairo (>= 1.4), python-glade2 (>= 2.12), python-rsvg (>=2.30.0), xdg-utils, tpfand (>= 0.95.2)
 Section: admin
 Priority: optional
 Description: Graphical configuration and monitoring interface for tpfand
