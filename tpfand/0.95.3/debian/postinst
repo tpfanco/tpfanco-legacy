@@ -1,0 +1,29 @@
+#!/bin/sh
+# postinst script for tpfand
+
+set -e
+
+case "$1" in
+    configure)
+                # install default config if none exists
+                if [ ! -e /etc/tpfand.conf ] ; then
+                        echo Installing default configuration file /etc/tpfand.conf
+                        cp -f /usr/share/tpfand/tpfand.conf.default /etc/tpfand.conf
+                fi
+
+                echo tpfand will automatically start after you reboot
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+
+exit 0
