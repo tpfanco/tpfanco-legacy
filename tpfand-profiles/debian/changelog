@@ -1,3 +1,9 @@
+tpfand-profiles (0.90.0) saucy; urgency=low
+
+  * add new profile for T400 (2768Z1B) (thanks to Arvid R)
+
+ -- Vladyslav Shtabovenko <dfew.entwickler@gmail.com>  Sat, 19 Apr 2014 15:03:59 +0200
+
 tpfand-profiles (20120603) oneiric; urgency=low
 
   * small correction for the L420 profile (thanks to Torsten R.)

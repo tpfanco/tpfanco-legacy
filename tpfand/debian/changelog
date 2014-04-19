@@ -1,3 +1,9 @@
+tpfand (0.95.3) saucy; urgency=low
+
+  * change shebangs to python 2.7
+
+ -- Vladyslav Shtabovenko <dfew.entwickler@gmail.com>  Sat, 19 Apr 2014 14:54:23 +0200
+
 tpfand (0.95.2) oneiric; urgency=low
 
   * fix fan pulsing on T410s (thanks to Shad for testing!)

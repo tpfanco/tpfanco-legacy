@@ -1,3 +1,9 @@
+tpfan-admin (0.96.4) saucy; urgency=low
+
+  * change shebangs to python2.7
+
+ -- Vladyslav Shtabovenko <dfew.entwickler@gmail.com>  Sat, 19 Apr 2014 15:08:10 +0200
+
 tpfan-admin (0.96.3) oneiric; urgency=low
 
   * accept kdesudo as gksudo alternative

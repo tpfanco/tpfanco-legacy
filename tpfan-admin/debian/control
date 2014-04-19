@@ -1,15 +1,25 @@
 Source: tpfan-admin
 Section: admin
 Priority: optional
-Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
-Build-Depends: debhelper (>= 7.0.50~), python-support
-XS-Python-Version: >= 2.6
-Standards-Version: 3.9.2
+Maintainer: Vladyslav Shtabovenko <dfew.entwickler@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-python, python-all
+Standards-Version: 3.9.4
+X-Python-Version: 2.7
 Homepage: http://code.google.com/p/tpfanco/
 
 Package: tpfan-admin
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, dh-python, dbus (>= 1.1.20), python-gtk2 (>= 2.12), python-dbus (>= 0.82), gksu | kdesudo, python-cairo (>= 1.4), python-glade2 (>= 2.12), python-rsvg (>=2.30.0), xdg-utils, tpfand (>= 0.95.2)
+Depends: ${misc:Depends}, 
+		 ${python:Depends}, 
+		 dbus (>= 1.1.20), 
+		 python-gtk2 (>= 2.12), 
+		 python-dbus (>= 0.82),
+		 gksu | kdesudo, 
+		 python-cairo (>= 1.4), 
+		 python-glade2 (>= 2.12), 
+		 python-rsvg (>=2.30.0), 
+		 xdg-utils, 
+		 tpfand (>= 0.95.2)
 Section: admin
 Priority: optional
 Description: Graphical configuration and monitoring interface for tpfand

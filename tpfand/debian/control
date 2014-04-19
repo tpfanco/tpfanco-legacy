@@ -1,15 +1,21 @@
 Source: tpfand
 Section: admin
 Priority: optional
-Maintainer: Vladyslav Shtabovenko <DFEW.Entwickler@googlemail.com>
-Build-Depends: debhelper (>= 7.0.50~), python-support
-XS-Python-Version: >= 2.6
-Standards-Version: 3.9.2
+Maintainer: Vladyslav Shtabovenko <dfew.entwickler@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-python, python-all
+Standards-Version: 3.9.4
+X-Python-Version: 2.7
 Homepage: http://code.google.com/p/tpfanco/
 
 Package: tpfand
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, acpi-support (>= 0.103), dbus (>= 1.1.20), python-dbus (>= 0.82), python-dmidecode (>= 3.10), python-libxml2 (>= 2.7.6)
+Depends: ${misc:Depends}, 
+		 ${python:Depends}, 
+		 acpi-support (>= 0.103), 
+		 dbus (>= 1.1.20), 
+		 python-dbus (>= 0.82), 
+		 python-dmidecode (>= 3.10), 
+		 python-libxml2 (>= 2.7.6)
 Section: admin
 Priority: optional
 Description: Controls fan speed of ThinkPad notebooks
